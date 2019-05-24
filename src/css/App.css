@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background-color: #34495e;
+}
+
+.login-container{
+  width: 30rem;
+  height: 20rem;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+}
+
+.login-txt{
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.login-btn-container{
+  background-color: #e74c3c;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.5rem;
+  width: 70%;
+}
