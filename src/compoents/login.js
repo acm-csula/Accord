@@ -8,7 +8,8 @@ const login =  () => {
         <div className="login-container">
         <img className="login-logo" alt="Accord Text Logo" src={logo}></img>
         <div className="login-btn-container">
-          <a className="login-txt"> Login </a> <br></br>
+          <a className="login-txt" href="#"> Login </a>
+          <br></br>
           <small className="text-muted small-text"> with Google.</small>
         </div>
       </div>
