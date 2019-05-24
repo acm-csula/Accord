@@ -1,17 +1,17 @@
 import React from 'react';
-import logo from './images/accordlogoname.png';
-import './css/App.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter, Route } from "react-router-dom";
+
+import index from "./compoents/index";
+import login from "./compoents/login";
 
 function App() {
   return (
-    <div className="login-container">
-      <img className="login-logo" src={logo}></img>
-      <div className="login-btn-container">
-        <a className="login-txt"> Login </a> <br></br>
-        <a className="text-muted small-text"> with Google.</a>
+    <BrowserRouter>
+      <div>
+        <Route path="/" component={index} exact/>
+        <Route path="/login" component={login}/>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
