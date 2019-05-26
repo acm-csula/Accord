@@ -1,18 +1,24 @@
-import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import React from 'react'
+import RoomView from './components/RoomView'
+import Submenu from './components/Submenu'
+import ChatView from './components/ChatView'
 
-import home from "./compoents/home";
-import login from "./compoents/login";
+import './App.css'
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div>
-        <Route path="/" component={home} exact/>
-        <Route path="/login" component={login}/>
-      </div>
-    </BrowserRouter>
-  );
+function App(props) {
+    return (
+        <div className="App">
+            <div>
+                <RoomView></RoomView>
+            </div>
+            <div>
+                <Submenu></Submenu>
+            </div>
+            <div>
+                <ChatView></ChatView>
+            </div>
+        </div>
+    )
 }
 
-export default App;
+export default App
