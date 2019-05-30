@@ -5,12 +5,6 @@ import App from './App';
 import * as firebase from 'firebase';
 import * as serviceWorker from './serviceWorker';
 
-var config= {
-    
-}
-
-firebase.initializeApp(config);
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 serviceWorker.unregister();

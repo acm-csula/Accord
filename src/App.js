@@ -1,18 +1,40 @@
-import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import React, { Component } from 'react';
+import fire from './config/fire'
+import Login from './components/login.js';
+import Home from './components/home.js';
 
-import home from "./components/home";
-import login from "./components/login";
+class App extends Component {
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div>
-        <Route path="/" component={home} exact/>
-        <Route path="/login" component={login}/>
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: null,
+    };
+
+    this.authListener = this.authListener.bind(this);
+  }
+
+  componentDidMount() {
+    this.authListener();
+  }
+
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      } else {
+        this.setState({ user: null });
+      }
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        { this.state.user ? ( <Home /> ) : ( <Login /> ) }
       </div>
-    </BrowserRouter>
-  );
+    );
+  }
 }
 
 export default App;
