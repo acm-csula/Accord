@@ -4,6 +4,7 @@ import '../css/login.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import fire from '../config/fire';
 
+
 class login extends React.Component {
 
     login(){
@@ -11,7 +12,7 @@ class login extends React.Component {
             const password = document.querySelector('#password').value;
             fire.auth().signInWithEmailAndPassword(email, password)
               .then((u) => {
-                alert.show('Successfully Logged In');
+                console.log('Successfully Logged In');
               })
               .catch((err) => {
                 console.log('Error: ' + err.toString());
@@ -33,15 +34,17 @@ class login extends React.Component {
     render(){
         return(
               <div className="login-container" style={{textAlign: 'center'}}>
-                <input id="email" placeholder="Email ID" type="text"/>
+                <img src={logo} style={{width: 150, height: 150, align: 'center'}}/>
+                <br/>
+                <input id="email" className="email-field" placeholder="Email ID" type="text" style={{align: 'center'}}/>
                 <br/>
                 <br/>
-                <input id="password" placeholder="Password" type="password"/>
+                <input id="password" className="email-field" placeholder="Password" type="password"/>
                 <br/>
                 <br/>
-                    <a className="login-txt" onClick={this.login}> Login </a>
+                    <button className="login-txt login-btn-container" onClick={this.login}> Login </button>
                     <br/>
-                    <a className="login-txt" onClick={this.createAccount}> Create Account</a>
+                    <button className="login-txt login-btn-container" onClick={this.createAccount}> Create Account </button>
               </div>
          );
     }

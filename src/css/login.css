@@ -28,7 +28,7 @@
   width: 70%;
   margin: auto;
   bottom: 10rem;
-  position: relative;
+  margin-top: 30px;
   height: 3.3rem;
 }
 
@@ -45,4 +45,9 @@
   width: 30rem;
   bottom: 12rem;
   position: relative;
+}
+
+.email-field{
+    border-radius: 5px;
+    text-color: #000;
 }
