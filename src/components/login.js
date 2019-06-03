@@ -33,19 +33,17 @@ class login extends React.Component {
 
     render(){
         return(
-              <div className="login-container" style={{textAlign: 'center'}}>
-                <img src={logo} style={{width: 150, height: 150, align: 'center'}}/>
-                <br/>
-                <input id="email" className="email-field" placeholder="Email ID" type="text" style={{align: 'center'}}/>
-                <br/>
-                <br/>
-                <input id="password" className="email-field" placeholder="Password" type="password"/>
-                <br/>
-                <br/>
-                    <button className="login-txt login-btn-container" onClick={this.login}> Login </button>
-                    <br/>
-                    <button className="login-txt login-btn-container" onClick={this.createAccount}> Create Account </button>
-              </div>
+          <div className="login-container" style={{textAlign: 'center'}}>
+            <img className="login-logo" src={logo}/>
+            <div className="post-container">
+            <input id="email" className="input-field" placeholder="Email" type="text"/>
+            <input id="password" className="input-field" placeholder="Password" type="password"/>
+            <br/>
+            <button className="login-btn" onClick={this.login}> Login </button>
+            <br/>
+            <button className="create-btn" onClick={this.createAccount}> Don't have an account?  </button>
+            </div>
+          </div>
          );
     }
 }
