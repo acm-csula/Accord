@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fire from './config/fire'
 import Login from './components/login.js';
+import PostView from './components/PostView.js'
 import Home from './components/home.js';
 
 class App extends Component {
@@ -31,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        { this.state.user ? ( <Home /> ) : ( <Login /> ) }
+        { this.state.user ? ( <PostView /> ) : ( <Login /> ) }
       </div>
     );
   }
