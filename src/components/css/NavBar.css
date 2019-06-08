@@ -1,10 +1,10 @@
-/*---------SUBMENU---------*/
-.optionsView {
+/*---------ROOM VIEW---------*/
+.roomNav {
 	text-align: center;
 	height: 100vh;
-	width: 240px;
+	width: 90px;
 	overflow-y: auto;
-	background-color: yellow;
+	background-color: red;
 }
 
 .roomList > ul {

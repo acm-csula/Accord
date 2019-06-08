@@ -1,0 +1,22 @@
+.profileView {
+	width: 240px;
+}
+
+.iconView {
+	margin: 40px;
+}
+
+.profileIcon {
+	border: 10px solid black;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+.nameField {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,16 +1,7 @@
-/*---------CHAT---------*/
-.chatView {
-	position: absolute;
-	text-align: center;
-	height: 100vh;
-	width: calc(100vw - 340px);
-	min-width: 400px;
-	background-color: blue;
-}
-
+/*---------ChatView---------*/
 .display {
 	height: calc(100vh - 60px);
-	width: 100%;
+	width: calc(100vw - 330px);
 	overflow-y: auto;
 	background-color: black;
 	color: grey;

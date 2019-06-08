@@ -1,24 +1,28 @@
 import React from 'react'
-import RoomView from './components/RoomView'
-import Submenu from './components/Submenu'
-import ChatView from './components/ChatView'
+import NavBar from './components/NavBar'
+import MainView from './components/MainView'
 
 import './App.css'
 
-function App(props) {
-    return (
-        <div className="App">
-            <div>
-                <RoomView></RoomView>
+class App extends React.Component {
+    state = {
+            currentUser: '',
+            currentRoom: '',
+            currentView: 'chat'
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <div>
+                    <NavBar/>
+                </div>
+                <div>
+                    <MainView/>
+                </div>
             </div>
-            <div>
-                <Submenu></Submenu>
-            </div>
-            <div>
-                <ChatView></ChatView>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default App
