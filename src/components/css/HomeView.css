@@ -1,0 +1,9 @@
+/*---------HomeView---------*/
+.centerView {
+	display: flex;
+	text-align: center;
+	height: 100vh;
+	width: calc(100vw - 90px);
+	min-width: 400px;
+	background-color: blue;
+}

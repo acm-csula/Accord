@@ -1,9 +1,9 @@
 import React from 'react'
 import ProfileView from './ProfileView.js'
 
-import './css/SubView.css'
+import './css/HomeMenu.css'
 
-class SubView extends React.Component {
+class HomeMenu extends React.Component {
 	render() {
 		return (
 	        <div className='optionsView'>
@@ -13,4 +13,4 @@ class SubView extends React.Component {
 	}
 }
 
-export default SubView
+export default HomeMenu

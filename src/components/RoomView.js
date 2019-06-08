@@ -1,10 +1,10 @@
 import React from "react"
-import SubView from './SubView.js'
+import RoomMenu from './RoomMenu.js'
 import ChatView from './ChatView.js'
 
-import './css/MainView.css'
+import './css/RoomView.css'
 
-class MainView extends React.Component {
+class RoomView extends React.Component {
 	constructor(props) {
 		super(props)
 	}
@@ -12,7 +12,7 @@ class MainView extends React.Component {
         return (
             <div className="centerView">
             	<div>
-            		<SubView/>
+            		<RoomMenu/>
             	</div>
             	<div>
             		<ChatView/>
@@ -22,4 +22,4 @@ class MainView extends React.Component {
     }
 }
 
-export default MainView
+export default RoomView
