@@ -10,7 +10,8 @@ logout() {
   
   render(){
   return(
-          <div className="wrapper row justify-content-left">
+        <div className="content">
+                      <div className="wrapper row justify-content-left">
               <div className="server-container">
                   <div className="home-local">
                       <button>
@@ -19,8 +20,8 @@ logout() {
                   </div>
                   <div className="client-servers ">
                       <button> ACM </button>
-                      <button> SWAG </button>
-                      <button> DERIC </button>
+                      <button> S </button>
+                      <button> D </button>
                       <button> IS </button>
                       <button> c00l </button>
                   </div>
@@ -37,13 +38,22 @@ logout() {
                               <a className="server-title"> ACM @CSULA
                                 <i class="fas fa-sort-down"></i>
                               </a>
-                              <button onClick = {this.logout}>Logout</button>
+                              <div className="username-stats">
+                                <i class="fas fa-circle"></i>
+                                <a> morgan freeman </a>
+                              </div>
                           </div>
+                          <button onClick = {this.logout}>Logout</button>
                       </div>
-                      <div className="col-md-9 right-container"> ur m0m gey </div>
+                      <div className="col-md-10 right-container"> ur m0m gey </div>
                   </div>
               </div>
           </div>
+          <div className="user-menu">
+            
+          </div>
+        </div>
+
       );
   }
 };

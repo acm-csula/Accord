@@ -1,3 +1,15 @@
+.home-local button:hover{
+    border-radius: 20px;
+}
+
+.client-servers button:hover{
+    border-radius: 20px;
+}
+
+.client-local button:hover{
+    border-radius: 20px;
+}
+
 .server-container{
     background-color: #1a2530;
 }
@@ -24,18 +36,20 @@
 
 .server-title{
     font-size: 1.5rem;
+    line-height: 0;
     font-weight: bold;
 }
 
 .home-local button {
-    width: 5rem;
+    width: 3.5rem;
     background-color: #232d38;
     outline: none !important;
     border-width: inherit;
-    height: 5rem;
+    height: 3.5rem;
     margin: 1rem;
     margin-left: 2rem;
     border-radius: 50%;
+    transition: all 0.5s ease-in-out;
 }
 
 .divder{
@@ -45,7 +59,7 @@
 }
 
 .home-local i{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
 }
 
@@ -54,16 +68,17 @@
 }
 
 .client-local button{
-    width: 5rem;
+    width: 3.5rem;
     border-radius: 50%;
     border-width: inherit;
-    height: 5rem;
+    height: 3.5rem;
     margin: 1rem;
     margin-left: 2rem;
     background-color: #232d38;
     margin-bottom: 1rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
 }
 
 .client-servers button{
@@ -73,13 +88,32 @@
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
-    width: 5rem;
-    height: 5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     margin-left: 2rem;
     margin-bottom: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.username-stats i{
+    color: #2ecc71;
+    font-size: 0.8rem;
 }
 
 .server-title i{
-    font-size: 2.5rem;
-    margin-left: 1rem;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.user-menu{
+    position: absolute;
+    top: 5rem;
+    left: 6rem;
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    transition: all 1s ease-in-out;
+    display: none;
 }
