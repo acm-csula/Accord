@@ -3,9 +3,11 @@ import '../css/home.css';
 import fire from '../config/fire';
 
 class home extends React.Component {
+
 logout() {
     fire.auth().signOut();
   }
+  
   render(){
   return(
           <div className="wrapper row justify-content-left">
