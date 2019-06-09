@@ -1,6 +1,5 @@
 .server-container{
     background-color: #1a2530;
-    width:7rem !important;
 }
 
 .left-container{
@@ -25,4 +24,62 @@
 
 .server-title{
     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.home-local button {
+    width: 5rem;
+    background-color: #232d38;
+    outline: none !important;
+    border-width: inherit;
+    height: 5rem;
+    margin: 1rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+}
+
+.divder{
+    background-color: white;
+    height: 0.1rem;
+    width: 50%;
+}
+
+.home-local i{
+    font-size: 2rem;
+    color: white;
+}
+
+.client-servers{
+    display: grid;
+}
+
+.client-local button{
+    width: 5rem;
+    border-radius: 50%;
+    border-width: inherit;
+    height: 5rem;
+    margin: 1rem;
+    margin-left: 2rem;
+    background-color: #232d38;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.client-servers button{
+    border-radius: 50%;
+    background-color: rgb(170, 127, 255);
+    border-width: inherit;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.server-title i{
+    font-size: 2.5rem;
+    margin-left: 1rem;
 }
