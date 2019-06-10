@@ -52,10 +52,12 @@
     transition: all 0.5s ease-in-out;
 }
 
-.divder{
-    background-color: white;
-    height: 0.1rem;
-    width: 50%;
+.divider{
+    background-color: rgb(228, 228, 228);
+    height: 0.05rem;
+    width: 90%;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .home-local i{
@@ -109,11 +111,36 @@
     position: absolute;
     top: 5rem;
     left: 6rem;
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background-color: white;
     transition: all 1s ease-in-out;
-    display: none;
+}
+
+.account-set{
+    color: #3498db;
+}
+
+.user-stats{
+    margin-top: 1rem;
+    color: #2ecc71
+}
+
+.user-menu button{
+    background-color: transparent;
+    border-width: inherit;
+    font-weight: bold;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.logout-btn{
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.user-menu i{
+    margin-right: 0.5rem;
 }
