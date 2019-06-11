@@ -12,14 +12,17 @@
 
 .server-container{
     background-color: #1a2530;
+    z-index: 3;
+    box-shadow: 10px 30px 50px 0px #232d38;
 }
 
 .left-container{
     background-color: #2c3e50;
     height: 100vh;
-    min-width: 19em;
     color: aliceblue;
     padding: 0 !important;
+    max-width: 16rem !important;
+    min-width: 16rem !important;
 }
 
 .server-title-header{
@@ -155,4 +158,40 @@
 
 .server-title-header:hover > .user-menu{
     display: block;
+}
+
+.left-container{
+    z-index: 2;
+}
+.right-container{
+    margin: 0 !important;
+    padding: 0;
+    width: 100%;
+    background-color: #efecec;
+    flex: 1 !important;
+    overflow: hidden;
+}
+
+.chan-header{
+    border-bottom: 0.5px solid rgb(213, 213, 213);
+    z-index: 2;
+    padding-left: 2rem;
+}
+
+.chan-header h1{
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.chan-header h3{
+    font-weight: bold;
+    color: #2c3e50;
+    line-height: 1.7;
+    margin-left: 0.3rem;
+}
+
+.chan-header p{
+    position: relative;
+    top: 0.8rem;
+    margin-left: 1rem;
 }

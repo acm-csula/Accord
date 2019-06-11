@@ -11,7 +11,7 @@ logout() {
   render(){
   return(
         <div className="content">
-                      <div className="wrapper row justify-content-left">
+            <div className="wrapper row justify-content-left">
               <div className="server-container">
                   <div className="home-local">
                       <button>
@@ -55,7 +55,20 @@ logout() {
                           </div>
                           
                       </div>
-                      <div className="col-md-8 right-container"> ur m0m gey </div>
+                      <div className="col-md-10 right-container"> 
+                        <div className="chan-header d-flex">
+                          <h1> #</h1>
+                          <h3> general </h3> 
+                          <p> u can post any kind of dankmemes but no normie memes allowed though or you will be burned alive.</p>
+                        </div>
+                        <div className="message-container">
+                        ur m0m gey 
+                        </div>
+                        <div className="sender-container">
+
+                        </div>
+                      
+                      </div>
                   </div>
               </div>
           </div>
