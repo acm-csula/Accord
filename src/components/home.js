@@ -21,9 +21,10 @@ logout() {
                   <div className="client-servers ">
                       <button> ACM </button>
                       <button> S </button>
-                      <button> D </button>
-                      <button> IS </button>
-                      <button> c00l </button>
+                      <button> U </button>
+                      <button> C </button>
+                      <button> K </button>
+                      <button> S </button>
                   </div>
                   <div className="client-local">
                       <button>
@@ -62,10 +63,17 @@ logout() {
                           <p> u can post any kind of dankmemes but no normie memes allowed though or you will be burned alive.</p>
                         </div>
                         <div className="message-container">
-                        ur m0m gey 
+                          <div className="user-input">
+                            <img src="#" className="user-profile-pic"/>
+                            <a className="username-message"> deric </a>
+                            <a className="mess-timestamp"> Today at 4:20am </a>
+                            <p> urm0m is fattt</p>
+                          </div>
                         </div>
-                        <div className="sender-container">
-
+                        <div className="bottom-container">
+                          <div className="sender-container">
+                            <input className="message-field" placeholder="Message #general" type="text"/>
+                          </div>
                         </div>
                       
                       </div>
