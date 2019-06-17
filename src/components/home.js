@@ -1,6 +1,12 @@
 import React from "react";
-import '../css/home.css';
+
 import fire from '../config/fire';
+
+//css
+import '../css/home.css';
+
+//Images
+import pfp from '../images/blank_pfp.png';
 
 class home extends React.Component {
 
@@ -43,6 +49,7 @@ logout() {
                                 <i class="fas fa-circle"></i>
                                 <a> morgan freeman </a>
                               </div>
+                              {/* MENU BAR*/}
                               <div className="user-menu">
                                 <button className="user-stats"> <i class="fas fa-circle"></i> Set a Status.. </button>
                                 <button className="account-set"> <i class="fas fa-user"></i>Profile & Account </button>
@@ -54,9 +61,24 @@ logout() {
                                 <button className="logout-btn" onClick = {this.logout}><i class="fas fa-sign-out-alt"></i>Logout</button>
                               </div>
                           </div>
+                          <div className="channel-container">
+                            <h6> Channels </h6>
+                            <div className="channel-btns row">
+                              <button className="channel-btn">
+                                <i class="fas fa-hashtag"></i> 
+                                <a> general </a>
+                              </button>
+                            </div>
+                            <div className="channel-btns row">
+                              <button className="channel-btn">
+                                <i class="fas fa-hashtag"></i> 
+                                <a> random </a>
+                              </button>
+                            </div>
+                          </div>
                           
                       </div>
-                      <div className="col-md-10 right-container"> 
+                      <div className="col-md-8 middle-container"> 
                         <div className="chan-header d-flex">
                           <h1> #</h1>
                           <h3> general </h3> 
@@ -64,10 +86,24 @@ logout() {
                         </div>
                         <div className="message-container">
                           <div className="user-input">
-                            <img src="#" className="user-profile-pic"/>
-                            <a className="username-message"> deric </a>
-                            <a className="mess-timestamp"> Today at 4:20am </a>
-                            <p> urm0m is fattt</p>
+                            <div className="profile-pic-container">
+                              <img src={ pfp } className="user-profile-pic"/>
+                            </div>
+                            <div className="inner-userInput-content">
+                              <a className="username-message"> deric </a>
+                              <a className="mess-timestamp"> Today at 4:20am </a>
+                              <p> dank memessssaksdmakmdad dsncdsknscskndsfds fs fsfsa fdsf saf afsa fadfjsa fajsf sjf sjv svsjv avljnalknca cads dlksfdsfs fsalfsad fsaflf saflsf dsafskf daf dsf dsf dsakf dsf asfasdjfnsfnsdsfdsf sdfdsfbcdv daskfsd fc</p>
+                            </div>
+                          </div>
+                          <div className="user-input">
+                            <div className="profile-pic-container">
+                              <img src={ pfp } className="user-profile-pic"/>
+                            </div>
+                            <div className="inner-userInput-content">
+                              <a className="username-message"> deric </a>
+                              <a className="mess-timestamp"> Today at 4:20am </a>
+                              <p> dank sknalkn</p>
+                            </div>
                           </div>
                         </div>
                         <div className="bottom-container">

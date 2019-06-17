@@ -1,3 +1,10 @@
+body{
+  background-image: url(/public/assets/images/backgroundlogin.jpg);
+  width: 100%;
+  height: 100%;
+  background-image: center;
+}
+
 .login-container{
   width: 30rem;
   height: 40rem;
