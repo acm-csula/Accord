@@ -1,0 +1,61 @@
+.nav-container {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #1a2530;
+}
+
+.home-local i{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.home-local button {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-width: inherit;
+    border-radius: 50%;
+    margin: 1rem;
+    background-color: #232d38;
+    transition: all 0.5s ease-in-out;
+}
+
+.home-local button:hover{
+    border-radius: 20px;
+}
+
+.client-servers{
+    display: grid;
+}
+
+.client-servers button{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border-width: inherit;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(170, 127, 255);
+    transition: all 0.5s ease-in-out;
+}
+
+.client-servers button:hover{
+    border-radius: 20px;
+}
+
+.join-server button:hover{
+    border-radius: 20px;
+}
+
+.join-server button{
+    border-radius: 50%;
+    height: 3.5rem;
+    background-color: #232d38;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}

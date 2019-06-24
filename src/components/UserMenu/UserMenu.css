@@ -1,0 +1,36 @@
+.user-menu {
+    position: absolute;
+    top: 5rem;
+    width: 16rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    transition: all 1s ease-in-out;
+}
+
+.user-menu i {
+    margin-right: 0.5rem;
+}
+
+.user-menu button {
+    background-color: transparent;
+    border-width: inherit;
+    font-weight: bold;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.user-stats{
+    margin-top: 1rem;
+    color: #2ecc71
+}
+
+.account-set{
+    color: #3498db;
+}
+
+.logout-btn{
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
