@@ -62,7 +62,11 @@ logout() {
                               </div>
                           </div>
                           <div className="channel-container">
-                            <h6> Channels </h6>
+                            <h6 className="title-channel"> Channels 
+                              <button>
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </h6>
                             <div className="channel-btns row">
                               <button className="channel-btn">
                                 <i class="fas fa-hashtag"></i> 
@@ -76,7 +80,15 @@ logout() {
                               </button>
                             </div>
                           </div>
-                          
+                          <div className="dm-container">
+                            <h6 className="title-channel"> Direct Messages </h6>
+                              <div className="user-dm-container">
+                                <a className="dm-user">
+                                  <i class="fas fa-circle"></i>
+                                  deric
+                                </a>
+                              </div>
+                          </div>
                       </div>
                       <div className="col-md-8 middle-container"> 
                         <div className="chan-header d-flex">
@@ -90,7 +102,7 @@ logout() {
                               <img src={ pfp } className="user-profile-pic"/>
                             </div>
                             <div className="inner-userInput-content">
-                              <a className="username-message"> deric </a>
+                              <a className="username-message"> Morgan Freeman </a>
                               <a className="mess-timestamp"> Today at 4:20am </a>
                               <p> dank memessssaksdmakmdad dsncdsknscskndsfds fs fsfsa fdsf saf afsa fadfjsa fajsf sjf sjv svsjv avljnalknca cads dlksfdsfs fsalfsad fsaflf saflsf dsafskf daf dsf dsf dsakf dsf asfasdjfnsfnsdsfdsf sdfdsfbcdv daskfsd fc</p>
                             </div>
@@ -101,7 +113,7 @@ logout() {
                             </div>
                             <div className="inner-userInput-content">
                               <a className="username-message"> deric </a>
-                              <a className="mess-timestamp"> Today at 4:20am </a>
+                              <a className="mess-timestamp"> Today at 4:20pm </a>
                               <p> dank sknalkn</p>
                             </div>
                           </div>
