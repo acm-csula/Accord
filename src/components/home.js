@@ -34,7 +34,7 @@ logout() {
                   </div>
                   <div className="client-local">
                       <button>
-                          <i class="fas fa-plus"></i>
+                          <i className="fas fa-plus"></i>
                       </button>
                   </div>
               </div>
@@ -43,10 +43,10 @@ logout() {
                       <div className="col-md-2 left-container">
                           <div className="server-title-header">
                               <a className="server-title"> ACM @CSULA
-                                <i class="fas fa-sort-down"></i>
+                                <i className="fas fa-sort-down"></i>
                               </a>
                               <div className="username-stats">
-                                <i class="fas fa-circle"></i>
+                                <i className="fas fa-circle"></i>
                                 <a> morgan freeman </a>
                               </div>
                               {/* MENU BAR*/}
@@ -64,18 +64,18 @@ logout() {
                           <div className="channel-container">
                             <h6 className="title-channel"> Channels 
                               <button>
-                                <i class="fas fa-plus"></i>
+                                <i className="fas fa-plus"></i>
                               </button>
                             </h6>
                             <div className="channel-btns row">
                               <button className="channel-btn">
-                                <i class="fas fa-hashtag"></i> 
+                                <i className="fas fa-hashtag"></i> 
                                 <a> general </a>
                               </button>
                             </div>
                             <div className="channel-btns row">
                               <button className="channel-btn">
-                                <i class="fas fa-hashtag"></i> 
+                                <i className="fas fa-hashtag"></i> 
                                 <a> random </a>
                               </button>
                             </div>
@@ -84,7 +84,7 @@ logout() {
                             <h6 className="title-channel"> Direct Messages </h6>
                               <div className="user-dm-container">
                                 <a className="dm-user">
-                                  <i class="fas fa-circle"></i>
+                                  <i className="fas fa-circle"></i>
                                   deric
                                 </a>
                               </div>
