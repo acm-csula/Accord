@@ -1,4 +1,5 @@
 import React from "react"
+import HomeMenu from '../HomeMenu/HomeMenu'
 
 import './HomeView.css'
 
@@ -9,6 +10,7 @@ class HomeView extends React.Component {
     render() {
         return (
             <div className="centerView">
+            	<HomeMenu/>
             </div>
         )
     }

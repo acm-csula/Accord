@@ -1,12 +1,12 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import UserMenu from '../UserMenu/UserMenu'
+import SubMenu from '../SubMenu/SubMenu'
 import ChannelPanel from '../ChannelPanel/ChannelPanel'
 
-import './Menu.css'
+import './RoomMenu.css'
 
 
-class Menu extends React.Component {
+class RoomMenu extends React.Component {
 	constructor(props) {
 		super(props)
 
@@ -55,7 +55,7 @@ class Menu extends React.Component {
 
 	render() {
 		return (
-			<div className='menu-container'>
+			<div className='room-menu-container'>
 				<div className="server-title-header" onClick={this.actions.onPress}>
 					<a className="server-title">ACM @CSULA<i class="fas fa-sort-down"></i></a>
 					<div className="username-stats">
@@ -64,10 +64,10 @@ class Menu extends React.Component {
 					</div>
 				</div>
 				<ChannelPanel/>
-				{this.state.menuPressed && <UserMenu/>}
+				{this.state.menuPressed && <SubMenu actions={this.props.actions}/>}
             </div>
 		)
 	}
 }
 
-export default Menu
+export default RoomMenu

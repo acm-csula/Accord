@@ -1,18 +1,14 @@
 import React from 'react'
 
-import './UserMenu.css'
+import './SubMenu.css'
 
-class UserMenu extends React.Component {
+class SubMenu extends React.Component {
 	render() {
 		return (
 	    	<div className="user-menu">
 				<button className="user-stats">
 					<i class="fas fa-circle"></i>
 					Set a Status..
-				</button>
-				<button className="account-set">
-					<i class="fas fa-user"></i>
-					Profile & Account 
 				</button>
 				<div className="divider"></div>
 				<button className="server-set">
@@ -23,12 +19,8 @@ class UserMenu extends React.Component {
 					<i class="fas fa-plus"></i>
 					Create Channel 
 				</button>
-				<button className="notifi">
-					<i class="far fa-bell"></i>
-					Notifications Settings
-				</button>
 				<div className="divider"></div>
-				<button className="logout-btn">
+				<button className="logout-btn" onClick={this.props.actions.logout}>
 				    <i class="fas fa-sign-out-alt"></i>
 				    Logout
 				</button>
@@ -37,4 +29,4 @@ class UserMenu extends React.Component {
 	}
 }
 
-export default UserMenu
+export default SubMenu

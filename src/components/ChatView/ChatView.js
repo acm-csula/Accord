@@ -7,8 +7,8 @@ import pfp from './blank_pfp.png';
 
 const ChatView = () => {
 	return (
-		<div className="col-md-8 middle-container">
-			<div className="chan-header d-flex">
+		<div className="chat-container">
+			<div className="chan-header">
 				<h1> #</h1>
 				<h3> general </h3> 
 				<p> u can post any kind of dankmemes but no normie memes allowed though or you will be burned alive.</p>

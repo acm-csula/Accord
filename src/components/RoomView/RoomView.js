@@ -1,6 +1,6 @@
 import React from "react"
 import {Route} from 'react-router-dom'
-import Menu from '../Menu/Menu'
+import RoomMenu from '../RoomMenu/RoomMenu'
 import ChatView from '../ChatView/ChatView'
 
 import './RoomView.css'
@@ -13,8 +13,8 @@ class RoomView extends React.Component {
     render() {
         return (
             <div className="room-view-container">
-                <Menu/>
-                <Route path='/acm/general' component={ChatView}/>
+                <RoomMenu actions={this.props.actions}/>
+                <ChatView/>
             </div>
         )
     }

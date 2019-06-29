@@ -8,8 +8,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: null,
-    };
+      user: null
+    }
+
+    this.actions = {
+        logout: () => {
+            fire.auth().signOut()
+        }
+    }
 
     this.authListener = this.authListener.bind(this);
   }
@@ -31,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        { this.state.user ? ( <PostView /> ) : ( <Login /> ) }
+        { this.state.user ? ( <PostView actions={this.actions}/> ) : ( <Login /> ) }
       </div>
     );
   }

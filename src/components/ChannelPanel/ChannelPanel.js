@@ -8,20 +8,10 @@ const ChannelPanel = () => {
         <div className='channel-container'>
     		<h6> Channels </h6>
             <div className="channel-btns">
-                <Link to='/acm/general'>
-                    <button className="channel-btn">
-                        <i class="fas fa-hashtag"></i> 
-                        <a> general </a>
-                    </button>
-                </Link>
-            </div>
-            <div className="channel-btns">
-                <Link to='/acm/random'>
-                    <button className="channel-btn">
-                        <i class="fas fa-hashtag"></i> 
-                        <a> random </a>
-                    </button>
-                </Link>
+                <button className="channel-btn">
+                    <i class="fas fa-hashtag"></i> 
+                    <a> {'general'}</a>
+                </button>
             </div>
         </div>
 	)
