@@ -2,6 +2,7 @@
     width: calc(100% - 16rem);
     background-color: #efecec;
     overflow: hidden;
+    width: 100%;
 }
 
 .chan-header{
