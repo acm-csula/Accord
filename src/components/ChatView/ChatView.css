@@ -1,8 +1,9 @@
 .middle-container{
     max-width: inherit !important;
     background-color: #efecec;
-    /*flex: 1 !important;*/
+    flex: inherit !important;
     overflow: hidden;
+    width: 100%;
 }
 
 .chan-header{

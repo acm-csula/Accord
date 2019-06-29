@@ -177,8 +177,11 @@ body{
     width: 100%;
     max-width: inherit !important;
     background-color: #efecec;
-    flex: 1 !important;
     overflow: hidden;
+}
+
+.col-md-8{
+    flex: inherit !important;
 }
 
 .chan-header{
@@ -286,6 +289,16 @@ body{
     position: relative;
     width: 100%;
 }
+
+.view-container{
+    width: 100%;
+}
+
+.room-view-container{
+    width: 100%;
+}
+
+
 
 .user-profile-pic{
     width: 3rem;

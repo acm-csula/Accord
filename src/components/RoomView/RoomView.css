@@ -1,5 +1,6 @@
 .room-view-container {
 	display: inline-flex;
+	width: 100%;
 }
 
 .optionsView {
