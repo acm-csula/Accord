@@ -1,0 +1,27 @@
+.user-input{
+    display: flex;
+}
+
+.mess-timestamp{
+    font-size: 0.7rem;
+    color: #808080;
+}
+
+.username-message{
+    font-weight: bold;
+}
+
+.inner-userInput-content p{
+    max-width: inherit;
+}
+
+.user-input{
+    padding: 0.2rem 0.5rem;
+    overflow: none;
+}
+
+.user-profile-pic{
+    width: 3rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+}

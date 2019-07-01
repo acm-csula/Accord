@@ -1,4 +1,5 @@
 import React from 'react'
+import MessageBox from '../MessageBox/MessageBox'
 
 import './ChatView.css'
 
@@ -6,34 +7,33 @@ import './ChatView.css'
 import pfp from './blank_pfp.png';
 
 const ChatView = () => {
+	const mess1 = {
+		id: '123',
+		user: 'treblegni',
+		picURL: pfp,
+		content: 'dank memessssaksdmakmdad dsncdsknscskndsfds fs fsfsa fdsf saf afsa fadfjsa fajsf sjf sjv svsjv avljnalknca cads dlksfdsfs fsalfsad fsaflf saflsf dsafskf daf dsf dsf dsakf dsf asfasdjfnsfnsdsfdsf sdfdsfbcdv daskfsd fc',
+		time: '07/1/2019'
+	}
+
+	const mess2 = {
+		id: '1234',
+		user: 'deric',
+		picURL: pfp,
+		content: 'dank sknalkn',
+		time: '07/1/2019'
+	}
+
 	return (
 		<div className="chat-container">
 			<div className="chan-header">
 				<h1> #</h1>
-				<h3> general </h3> 
+				<h3> general </h3>
 				<p> u can post any kind of dankmemes but no normie memes allowed though or you will be burned alive.</p>
 			</div>
 			<div className="message-container">
-				<div className="user-input">
-					<div className="profile-pic-container">
-						<img src={ pfp } className="user-profile-pic"/>
-					</div>
-					<div className="inner-userInput-content">
-						<a className="username-message"> deric </a>
-						<a className="mess-timestamp"> Today at 4:20am </a>
-						<p> dank memessssaksdmakmdad dsncdsknscskndsfds fs fsfsa fdsf saf afsa fadfjsa fajsf sjf sjv svsjv avljnalknca cads dlksfdsfs fsalfsad fsaflf saflsf dsafskf daf dsf dsf dsakf dsf asfasdjfnsfnsdsfdsf sdfdsfbcdv daskfsd fc</p>
-					</div>
-				</div>
-				<div className="user-input">
-					<div className="profile-pic-container">
-						<img src={ pfp } className="user-profile-pic"/>
-					</div>
-					<div className="inner-userInput-content">
-						<a className="username-message"> deric </a>
-						<a className="mess-timestamp"> Today at 4:20am </a>
-						<p> dank sknalkn</p>
-					</div>
-				</div>
+				{/*We should use a loop to display messages. Should we make an api call here or when logging in?*/}
+				<MessageBox message={mess1}/>
+				<MessageBox message={mess2}/>
 			</div>
 			<div className="bottom-container">
 				<div className="sender-container">
