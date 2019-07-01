@@ -31,6 +31,19 @@
     margin-left: 1rem;
 }
 
+.message-container{
+    bottom: 4rem;
+    width: 100%;
+    padding: 1rem;
+    height: calc(100% - 9rem);
+    vertical-align: bottom;
+    overflow: auto;
+}
+
+.bottom-container{
+    bottom: 0;
+    padding: 1rem;
+}
 
 .sender-container{
     display: flex;
@@ -41,11 +54,6 @@
     border: 1px solid #1a2530;
 }
 
-.bottom-container{
-    bottom: 0;
-    padding: 1rem;
-}
-
 .message-field{
     width: inherit;
     background-color: transparent !important;
@@ -54,41 +62,3 @@
     margin-left: 2rem;
 }
 
-/* MESSAGE INPUT */
-
-.user-input{
-    display: flex;
-}
-
-.mess-timestamp{
-    font-size: 0.7rem;
-    color: #808080;
-}
-
-.username-message{
-    font-weight: bold;
-}
-
-.message-container{
-    bottom: 4rem;
-    width: 100%;
-    padding: 1rem;
-    height: calc(100% - 9rem);
-    vertical-align: bottom;
-    overflow: auto;
-}
-
-.inner-userInput-content p{
-    max-width: inherit;
-}
-
-.user-input{
-    padding: 0.2rem 0.5rem;
-    overflow: none;
-}
-
-.user-profile-pic{
-    width: 3rem;
-    margin-right: 1rem;
-    border-radius: 50%;
-}
