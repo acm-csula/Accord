@@ -9,7 +9,7 @@ import './PostView.css'
 class PostView extends React.Component {
     constructor(props) {
         super(props)
-
+        
         this.state = {
             user: 'treblegni',
             status: {

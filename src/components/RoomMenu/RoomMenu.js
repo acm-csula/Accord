@@ -57,7 +57,7 @@ class RoomMenu extends React.Component {
 		return (
 			<div className='room-menu-container'>
 				<div className="server-title-header" onClick={this.actions.onPress}>
-					<a className="server-title">ACM @CSULA<i class="fas fa-sort-down"></i></a>
+					<a className="server-title">ACM @CSULA<i className="fas fa-sort-down"></i></a>
 					<div className="username-stats">
 						<i style={this.state.status.green}>{console.log(this.state.status.green)}</i>
 						<a>{this.state.user}</a>
