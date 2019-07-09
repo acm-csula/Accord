@@ -55,7 +55,18 @@ class HomeMenu extends React.Component {
 						{this.state.username}
 					</div>
 				</div>
+				<div className="user-panel">
+					<button>
+						<i class="fas fa-users"></i>
+                        <a> Friends </a>
+                    </button>
+					<button>
+						<i class="fas fa-user-cog"></i>
+                        <a> Settings </a>
+                    </button>
+				</div>
 				<div className='friend-panel'>
+					<a className="dm-label"> Direct Messages </a>
 					<button>
                         <a> {'friend-1'}</a>
                     </button>
