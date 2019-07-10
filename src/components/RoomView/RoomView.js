@@ -14,7 +14,7 @@ class RoomView extends React.Component {
         return (
             <div className="room-view-container">
                 <RoomMenu actions={this.props.actions}/>
-                <ChatView/>
+                <ChatView state={this.props.state}/>
             </div>
         )
     }

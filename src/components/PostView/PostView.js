@@ -48,7 +48,7 @@ class PostView extends React.Component {
                 <div className="view-container">
                     <Nav/>
                     <Route exact path='/home' component={HomeView}/>
-                    <Route path='/acm' render={() => <RoomView actions={this.props.actions}/>}/>
+                    <Route path='/acm' render={() => <RoomView state={this.props.state} actions={this.props.actions}/>}/>
                     <Route path='/create-room'/>
                 </div>
             </BrowserRouter>
