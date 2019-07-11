@@ -4,7 +4,8 @@ import Login from './components/Login/Login.js';
 import PostView from './components/PostView/PostView.js'
 
 //hardcoded for testing
-const messageArray = [{id: 1,user: 'treblegni',roomID: '1',content:'hi there',time: '7/10/2019'}]
+const messageArray = [{id: 1,user: 'treblegni',room_id: '1',content:'hi there',time: '7/10/2019'}]
+const roomArray = [{id: 1,name: "acm",icon_url: "",owner_id: 1}]
 
 class App extends Component {
     loadMessages = () => {
@@ -23,7 +24,15 @@ class App extends Component {
 
         this.state = {
             user: null,
-            status: '',
+            status: {
+                display: 'inline-block',
+                height: '14px',
+                width: '14px',
+                borderRadius: '50%',
+                marginRight: '0.5rem',
+                backgroundColor: '#2ecc71'
+            },
+            rooms: roomArray,
             messages: messageArray
         }
 

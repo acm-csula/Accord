@@ -13,7 +13,7 @@ class RoomView extends React.Component {
     render() {
         return (
             <div className="room-view-container">
-                <RoomMenu actions={this.props.actions}/>
+                <RoomMenu room={this.props.room} state={this.props.state} actions={this.props.actions}/>
                 <ChatView state={this.props.state}/>
             </div>
         )
