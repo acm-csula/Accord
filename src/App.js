@@ -4,8 +4,31 @@ import Login from './components/Login/Login.js';
 import PostView from './components/PostView/PostView.js'
 
 //hardcoded for testing
-const messageArray = [{id: 1,user: 'treblegni',room_id: '1',content:'hi there',time: '7/10/2019'}]
-const roomArray = [{id: 1,name: "acm",icon_url: "",owner_id: 1}]
+const messageArray = 
+    [
+        {
+            id: '123',
+            user: 'treblegni',room_id: '1',
+            content: 'dank memessssaksdmakmdad dsncdsknscskndsfds fs fsfsa fdsf saf afsa fadfjsa fajsf sjf sjv svsjv avljnalknca cads dlksfdsfs fsalfsad fsaflf saflsf dsafskf daf dsf dsf dsakf dsf asfasdjfnsfnsdsfdsf sdfdsfbcdv daskfsd fc',
+            time: '07/1/2019'
+        },
+        {
+            id: '1234',
+            user: 'deric',
+            room_id: '1',
+            content: 'dank sknalkn',
+            time: '07/1/2019'
+        },
+        {
+            id: 1,
+            user: 'treblegni',
+            room_id: '1',
+            content:'hi there',
+            time: '7/10/2019'
+        }
+    ]
+
+const roomArray = [{id: 1,name: "acm",icon_url: "",owner_id: 1},{id: 2,name: "test",icon_url: "",owner_id: 1}]
 
 class App extends Component {
     loadMessages = () => {
@@ -25,12 +48,30 @@ class App extends Component {
         this.state = {
             user: null,
             status: {
-                display: 'inline-block',
-                height: '14px',
-                width: '14px',
-                borderRadius: '50%',
-                marginRight: '0.5rem',
-                backgroundColor: '#2ecc71'
+                green: {
+                    display: 'inline-block',
+                    height: '14px',
+                    width: '14px',
+                    borderRadius: '50%',
+                    marginRight: '0.5rem',
+                    backgroundColor: '#2ecc71'
+                },
+                red: {
+                    display: 'inline-block',
+                    height: '14px',
+                    width: '14px',
+                    borderRadius: '50%',
+                    marginRight: '0.5rem',
+                    backgroundColor: 'red'
+                },
+                yellow: {
+                    display: 'inline-block',
+                    height: '14px',
+                    width: '14px',
+                    borderRadius: '50%',
+                    marginRight: '0.5rem',
+                    backgroundColor: 'yellow'
+                }
             },
             rooms: roomArray,
             messages: messageArray

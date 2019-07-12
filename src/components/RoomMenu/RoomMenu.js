@@ -27,7 +27,7 @@ class RoomMenu extends React.Component {
 				<div className="server-title-header" onClick={this.actions.onPress}>
 					<a className="server-title">{this.props.room.name}<i className="fas fa-sort-down"></i></a>
 					<div className="username-stats">
-						<i style={this.props.state.status}></i>
+						<i style={this.props.state.status.green}></i>
 						<a>{this.props.state.user.email}</a>
 					</div>
 				</div>
