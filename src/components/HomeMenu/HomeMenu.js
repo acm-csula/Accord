@@ -6,43 +6,16 @@ import './HomeMenu.css'
 import defaultImage from './0.png'
 
 class HomeMenu extends React.Component {
-	state = {
-		username: 'treblegni',
-		status: {
-				green: {
-					display: 'inline-block',
-					height: '14px',
-					width: '14px',
-					borderRadius: '50%',
-					marginRight: '0.5rem',
-					backgroundColor: '#2ecc71'
-					
-				},
-				red: {
-					display: 'inline-block',
-					height: '10px',
-					width: '10px',
-					borderRadius: '50%',
-					marginRight: '0.5rem',
-					backgroundColor: '#2ecc71'
-				},
-				yellow: {
-					display: 'inline-block',
-					height: '10px',
-					width: '10px',
-					borderRadius: '50%',
-					marginRight: '0.5rem',
-					backgroundColor: '#2ecc71'
-				}
-		},
-		settingsOpen: false
-	}
+	constructor(props) {
+		super(props)
 
-	actions = {
-		openUserSettings: () => {
-			console.log('hey')
+		this.actions = {
+			openUserSettings: () => {
+				console.log('hey')
+			}
 		}
 	}
+
 	render() {
 		return (
 			<div className='home-menu-container'>
@@ -51,11 +24,22 @@ class HomeMenu extends React.Component {
 						<img className='icon' src={defaultImage}/>
 					</div>
 					<div className='nameField'>
-						<div style={this.state.status.green}/>
-						{this.state.username}
+						<div style={this.props.state.status.green}/>
+						{this.props.state.user.email}
 					</div>
 				</div>
+				<div className="user-panel">
+					<button>
+						<i class="fas fa-users"></i>
+                        <a> Friends </a>
+                    </button>
+					<button>
+						<i class="fas fa-user-cog"></i>
+                        <a> Settings </a>
+                    </button>
+				</div>
 				<div className='friend-panel'>
+					<a className="dm-label"> Direct Messages </a>
 					<button>
                         <a> {'friend-1'}</a>
                     </button>

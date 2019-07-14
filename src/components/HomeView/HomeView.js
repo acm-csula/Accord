@@ -3,17 +3,12 @@ import HomeMenu from '../HomeMenu/HomeMenu'
 
 import './HomeView.css'
 
-class HomeView extends React.Component {
-	constructor(props) {
-		super(props)
-	}
-    render() {
-        return (
-            <div className="centerView">
-            	<HomeMenu/>
-            </div>
-        )
-    }
+const HomeView = (props) => {
+    return (
+        <div className="centerView">
+        	<HomeMenu state={props.state} actions={props.actions}/>
+        </div>
+    )
 }
 
 export default HomeView

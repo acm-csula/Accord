@@ -3,16 +3,18 @@ import {Link} from 'react-router-dom'
 
 import './Nav.css'
 
-const Nav = () => {
+const Nav = (props) => {
+    const rooms = props.rooms.map(room => <Link to={'/' + room.name}><button> {room.name.substring(0,3)} </button></Link>)
+
     return (
         <div className='nav-container'>
             <div className="home-local">
-                <Link to='/home'><button><i class="fas fa-home"></i></button></Link>
+                <Link to='/home'><button><i className="fas fa-home"></i></button></Link>
             </div>
             <div className="client-servers">
-                <Link to='/acm'><button> ACM </button></Link>
+                {rooms}
                 <div className="join-server">
-                    <Link to='/create-room'><button><i class="fas fa-plus"></i></button></Link>
+                    <Link to='/create-room'><button><i className="fas fa-plus"></i></button></Link>
                 </div>
             </div>
         </div>

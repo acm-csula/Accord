@@ -5,19 +5,13 @@ import ChatView from '../ChatView/ChatView'
 
 import './RoomView.css'
 
-class RoomView extends React.Component {
-	constructor(props) {
-		super(props)
-	}
-
-    render() {
-        return (
-            <div className="room-view-container">
-                <RoomMenu actions={this.props.actions}/>
-                <ChatView/>
-            </div>
-        )
-    }
+const RoomView = (props) => {
+    return (
+        <div className="room-view-container">
+            <RoomMenu room={props.room} state={props.state} actions={props.actions}/>
+            <ChatView state={props.state}/>
+        </div>
+    )
 }
 
 export default RoomView

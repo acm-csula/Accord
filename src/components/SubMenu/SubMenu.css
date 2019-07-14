@@ -9,7 +9,7 @@
 }
 
 .user-menu i {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 .user-menu button {
@@ -21,9 +21,13 @@
     text-align: left;
 }
 
-.user-stats{
+.user-stats-online{
     margin-top: 1rem;
     color: #2ecc71
+}
+
+.user-stats-idle{
+    color: #f1c40f;
 }
 
 .account-set{
@@ -33,4 +37,11 @@
 .logout-btn{
     color: #e74c3c;
     margin-bottom: 1rem;
+}
+
+.status-label{
+    font-weight: bold;
+    position: relative;
+    left: 5rem;
+    top: 0.7rem;
 }
