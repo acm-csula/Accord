@@ -9,7 +9,7 @@ const ChannelPanel = () => {
     		<h6> Channels </h6>
             <div className="channel-btns">
                 <button className="channel-btn">
-                    <i class="fas fa-hashtag"></i> 
+                    <i className="fas fa-hashtag"></i> 
                     <a> {'general'}</a>
                 </button>
             </div>

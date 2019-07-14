@@ -54,3 +54,32 @@
     border-radius: 5px;
     background-color: inherit;
 }
+
+.user-panel{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-panel button{
+    margin-top: 1rem;
+    width: 95%;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #24303b;
+    border-width: inherit;
+    color: white;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.user-panel i{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.dm-label{
+    color: white !important;
+    margin-left: 1rem;
+}
