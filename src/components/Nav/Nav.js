@@ -17,6 +17,19 @@ const Nav = (props) => {
                     <Link to='/create-room'><button><i className="fas fa-plus"></i></button></Link>
                 </div>
             </div>
+            <div className="createRoom-container">
+                <div className="createRoom-header text-center">
+                    <h1> CHOOSE ONE WISELY! </h1>
+                </div>
+                <div className="createRoom-content">
+                    <div  className="createRoom-btn-container">
+                        <button id="createRoom" className="createRoom-btn"> CREATE </button>
+                    </div>
+                    <div  className="createRoom-btn-container">
+                        <button id="joinRoom" className="createRoom-btn"> JOIN </button>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
