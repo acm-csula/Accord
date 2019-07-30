@@ -17,7 +17,7 @@ class RoomMenu extends React.Component {
 		this.actions = {
 			onPress: () => {
 				let negate = !this.state.menuPressed
-
+        
 				if (this.state.openedMenuStyle == null) {
 					this.setState({
 						menuPressed: negate,

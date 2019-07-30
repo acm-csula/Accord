@@ -11,6 +11,7 @@ const ChatView = (props) => {
 			messages.push(<MessageBox message={props.room.messages[key]}/>)
 		})
 	}
+                                             
 	return (
 		<div className="chat-container">
 			<div className="chan-header">

@@ -13,7 +13,7 @@ const Nav = (props) => {
             rooms.push(<Link key={room.details.id} to={'/' + room.details.name + '-' + room.details.id.substring(room.details.id.length - 16,room.details.id.length)}><button>{room.details.name.substring(0,3)}</button></Link>)
         })
     }
-    
+
     return (
         <div className='nav-container'>
             <div className="home-local">

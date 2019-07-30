@@ -8,7 +8,7 @@ import defaultImage from './0.png'
 class HomeMenu extends React.Component {
 	constructor(props) {
 		super(props)
-
+    
 		this.state = {
 			status: [
                 {
@@ -55,7 +55,6 @@ class HomeMenu extends React.Component {
 		else {
 			this.setState({statusIndex: this.state.statusIndex + 1})
 		}
-		console.log(this.state.status[this.state.statusIndex])
 		
 		this.props.actions.setStatus(this.state.status[this.state.statusIndex])	
 	}
@@ -69,7 +68,6 @@ class HomeMenu extends React.Component {
 					</div>
 					<div className='nameField'>
 						<div style={this.props.state.status} onClick={this.updateStatus}/>
-						{console.log(this.props.state.status)}
 						{this.props.state.user.email}
 					</div>
 				</div>
@@ -87,18 +85,6 @@ class HomeMenu extends React.Component {
                         <a> Logout </a>
                     </button>
 				</div>
-				{/*<div className='friend-panel'>
-					<a className="dm-label"> Direct Messages </a>
-					<button>
-                        <a> {'friend-1'}</a>
-                    </button>
-                    <button>
-                        <a> {'friend-2'}</a>
-                    </button>
-                    <button> 
-                        <a> {'friend-3'}</a>
-                    </button>
-				</div>*/}
 				<div className="quick-settings">
 				</div>
             </div>
