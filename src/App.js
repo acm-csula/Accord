@@ -19,6 +19,7 @@ class App extends Component {
                 marginRight: '0.5rem',
                 backgroundColor: '#2ecc71'
             },
+            joinVisible: false,
             rooms: {},
             subscriptions: [],
             messages: []
@@ -59,9 +60,6 @@ class App extends Component {
             logout: () => {
                 fire.auth().signOut()
             },
-            joinRoom: () => {
-
-            },
             createRoom: (roomDetails) => {
                 const roomsRef = db.ref('rooms')
                 const newId = roomsRef.push().key
@@ -72,6 +70,9 @@ class App extends Component {
                         details: roomDetails
                     }
                 })
+            },
+            joinPressed: () => {
+                this.setState({joinVisible: !this.state.joinVisible})
             },
             joinRoom: (state) => {
                 console.log('joined')

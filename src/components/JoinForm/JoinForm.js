@@ -1,6 +1,8 @@
 import React from 'react'
 
-class JoinRoom extends React.Component {
+import './JoinForm.css'
+
+class JoinForm extends React.Component {
 	constructor(props) {
 		super(props)
 
@@ -31,15 +33,15 @@ class JoinRoom extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className='join-form-container'>
 				<form>
-					<input className="input-field" placeholder="Invite URL" type="text" value={this.state.name} onChange={this.updateName}/>
+					<input className="join-form-input" placeholder="Invite URL" type="text" value={this.state.name} onChange={this.updateName}/>
                     <br/>
-                    <button className="login-btn" onClick={this.joinRoom}>Join</button>
+                    <button className="join-form-btn" onClick={this.joinRoom}>Join</button>
 				</form>
 			</div>
 		)
 	}
 }
 
-export default JoinRoom
+export default JoinForm

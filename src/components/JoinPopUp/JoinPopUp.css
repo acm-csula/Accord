@@ -1,0 +1,18 @@
+.join-pop-up-container {
+    width: 40rem;
+    height: 28rem;
+    background-color: #ecf0f1;
+    z-index: 2;
+    position: absolute;
+    margin-left: 34%;
+    margin-top: 10%;
+    border-radius: 15px;
+    box-shadow: 0 2px 60px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.close-icon {
+    float: right;
+    margin-left: 100%;
+    margin-right: 1.2rem;
+    margin-top: 1rem;
+}

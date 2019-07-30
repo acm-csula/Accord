@@ -3,12 +3,11 @@ import {BrowserRouter,Route} from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import HomeView from '../HomeView/HomeView'
 import RoomView from '../RoomView/RoomView'
-import JoinView from '../JoinView/JoinView'
+import JoinPopUp from '../JoinPopUp/JoinPopUp'
 
 import './PostView.css'
 
 const PostView = (props) => {
-    
     const rooms = []
 
     if (props.state.rooms) {
@@ -20,12 +19,12 @@ const PostView = (props) => {
     }
 
     return (
-		<BrowserRouter>
+        <BrowserRouter>
             <div className="view-container">
                 <Nav state={props.state} actions={props.actions}/>
                 <Route exact path='/home' render={() => <HomeView state={props.state} actions={props.actions}/>}/>
                 {rooms}
-                <Route path='/join' render={() => <JoinView state={props.state} actions={props.actions}/>}/>
+                {props.state.joinVisible && <JoinPopUp state={props.state} actions={props.actions}/>}
             </div>
         </BrowserRouter>
     )

@@ -1,6 +1,8 @@
 import React from 'react'
 
-class CreateRoom extends React.Component {
+import './CreateForm.css'
+
+class CreateForm extends React.Component {
 	constructor(props) {
 		super(props)
 
@@ -37,16 +39,16 @@ class CreateRoom extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className='create-form-container'>
 				<form>
-					<input className="input-field" placeholder="Room Name" type="text" value={this.state.name} onChange={this.updateName}/>
-                    <input className="input-field" placeholder="Message" type="text" value={this.state.welcomeMessage} onChange={this.updateMessage}/>
+					<input className="create-form-input" placeholder="Room Name" type="text" value={this.state.name} onChange={this.updateName}/>
+                    <input className="create-form-input" placeholder="Message" type="text" value={this.state.welcomeMessage} onChange={this.updateMessage}/>
                     <br/>
-                    <button className="login-btn" onClick={this.createRoom}>Create</button>
+                    <button className="create-form-btn" onClick={this.createRoom}>Create</button>
 				</form>
 			</div>
 		)
 	}
 }
 
-export default CreateRoom
+export default CreateForm

@@ -22,7 +22,7 @@ const Nav = (props) => {
             <div className="client-servers">
                 {rooms}
                 <div className="join-server">
-                    <Link to='/join'><button><i className="fas fa-plus"></i></button></Link>
+                    <button onClick={props.actions.joinPressed}><i className="fas fa-plus"></i></button>
                 </div>
             </div>
         </div>
