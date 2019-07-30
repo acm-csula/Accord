@@ -1,0 +1,39 @@
+.createRoom-header{
+    font-weight: bold;
+    padding: 2rem;
+}
+
+.createRoom-content{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.createRoom-btn-container{
+    background-color: #dcdcdc;
+    padding: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 18rem;
+    border-radius: 10px;
+}
+
+.createRoom-btn{
+    color: white;
+    width: 15rem;
+    position: relative;
+    right: 1rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    top: 12.4rem;
+}
+#createRoom{
+    background-color: #3498db;
+    
+}
+
+#joinRoom{
+    background-color: #2ecc71;
+}

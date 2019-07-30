@@ -4,34 +4,36 @@ import './Login.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class login extends React.Component {
-    login(){
-        this.props.actions.login(this.state.email,this.state.password)
-        this.setState({email: '',password: ''})
-    }
-
-    createAccount(){
-        this.props.actions.createAccount(this.state.email,this.state.password)
-        this.setState({email: '', password: ''})
-    }
-
-    emailChange = (e) => {
-        this.setState({email: e.target.value})
-    }
-
-    passwordChange = (e) => {
-        this.setState({password: e.target.value})
-    }
-
     constructor(props) {
         super(props);
 
         this.state = {
-            email: '',
-            password: ''
+            emailInput: '',
+            passwordInput: ''
         }
         
         this.login = this.login.bind(this)
         this.createAccount = this.createAccount.bind(this)
+        this.updateEmailInput = this.updateEmailInput.bind(this)
+        this.updatePasswordInput = this.updatePasswordInput.bind(this)
+    }
+
+    login(){
+        this.props.actions.login(this.state.emailInput,this.state.passwordInput)
+        this.setState({emailInput: '',passwordInput: ''})
+    }
+
+    createAccount(){
+        this.props.actions.createAccount(this.state.emailInput,this.state.passwordInput)
+        this.setState({emailInput: '', passwordInput: ''})
+    }
+
+    updateEmailInput(e) {
+        this.setState({emailInput: e.target.value})
+    }
+
+    updatePasswordInput(e) {
+        this.setState({passwordInput: e.target.value})
     }
 
     render(){
@@ -39,8 +41,8 @@ class login extends React.Component {
             <div className="login-container" style={{textAlign: 'center'}}>
                 <img className="login-logo" src={logo}/>
                 <div className="post-container">
-                    <input className="input-field" placeholder="Email" type="text" value={this.state.email} onChange={this.emailChange}/>
-                    <input className="input-field" placeholder="Password" type="password" value={this.state.password} onChange={this.passwordChange}/>
+                    <input className="input-field" placeholder="Email" type="text" value={this.state.emailInput} onChange={this.updateEmailInput}/>
+                    <input className="input-field" placeholder="Password" type="password" value={this.state.passwordInput} onChange={this.updatePasswordInput}/>
                     <br/>
                     <button className="login-btn" onClick={this.login}> Login </button>
                     <br/>

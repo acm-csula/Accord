@@ -10,13 +10,28 @@ class RoomMenu extends React.Component {
 		super(props)
 
 		this.state = {
-			menuPressed: false
+			menuPressed: false,
+			openedMenuStyle: null
 		}
 
 		this.actions = {
 			onPress: () => {
 				let negate = !this.state.menuPressed
-				this.setState({menuPressed: negate})
+        
+				if (this.state.openedMenuStyle == null) {
+					this.setState({
+						menuPressed: negate,
+						openedMenuStyle: {
+							backgroundColor: '#232d38'
+						}
+					})
+				}
+				else {
+					this.setState({
+						menuPressed: negate,
+						openedMenuStyle: null
+					})
+				}
 			}
 		}
 	}
@@ -24,15 +39,16 @@ class RoomMenu extends React.Component {
 	render() {
 		return (
 			<div className='room-menu-container'>
-				<div className="server-title-header" onClick={this.actions.onPress}>
-					<a className="server-title">{this.props.room.name}<i className="fas fa-sort-down"></i></a>
+				<div className="server-title-header" style={this.state.openedMenuStyle}>
+					<a className="server-title">{this.props.room.details.name}
+					<i className="fas fa-sort-down" onClick={this.actions.onPress}></i></a>
 					<div className="username-stats">
 						<i style={this.props.state.status.green}></i>
 						<a>{this.props.state.user.email}</a>
 					</div>
 				</div>
 				<ChannelPanel/>
-				{this.state.menuPressed && <SubMenu actions={this.props.actions}/>}
+				{this.state.menuPressed && <SubMenu state={this.props.state} actions={this.props.actions} room={this.props.room}/>}
             </div>
 		)
 	}
