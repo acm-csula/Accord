@@ -4,14 +4,19 @@ import MessageBox from '../MessageBox/MessageBox'
 import './ChatView.css'
 
 const ChatView = (props) => {
-	const messages = props.state.messages.map(message => <MessageBox message={message}/>)
+	const messages = []
 
+	if (props.room.messages) {
+		Object.keys(props.room.messages).forEach(key => {
+			messages.push(<MessageBox message={props.room.messages[key]}/>)
+		})
+	}
 	return (
 		<div className="chat-container">
 			<div className="chan-header">
 				<h1> #</h1>
 				<h3> general </h3>
-				<p> u can post any kind of dankmemes but no normie memes allowed though or you will be burned alive.</p>
+				<p>{props.room.details.welcomeMessage}</p>
 			</div>
 			<div className="message-container">
 				{messages}

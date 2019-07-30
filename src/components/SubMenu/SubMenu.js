@@ -5,35 +5,30 @@ import './SubMenu.css'
 const SubMenu = (props) => {
 	return (
     	<div className="user-menu">
-			<a className="status-label"> Set status </a>
 			<button className="user-stats-online">
-			<i class="far fa-circle"></i>
-				Online
-			</button>
-			<button className="user-stats-idle">
-			<i class="far fa-circle"></i>
-				Idle
-			</button>
-			<button className="user-stats-invisible">
-				<i class="far fa-circle"></i>
-				Invisible
+			<i className="far fa-paper-plane"></i>
+				Send Invite
 			</button>
 			<hr></hr>
 			<div className="divider"></div>
 			<button className="server-set">
-				<i class="fas fa-cog"></i>
+				<i className="fas fa-cog"></i>
 				Server Settings 
 			</button>
 			<button className="create-chan"> 
-				<i class="fas fa-plus"></i>
+				<i className="fas fa-plus"></i>
 				Create Channel 
 			</button>
 			<hr></hr>
 			<div className="divider"></div>
-			<button className="logout-btn" onClick={props.actions.logout}>
-			    <i className="fas fa-sign-out-alt"></i>
-			    Logout
-			</button>
+			{props.room.details.ownerId == props.state.user.uid && <button className="logout-btn">
+			    <i className="fas fa-times-circle"></i>
+			    Close Room
+			</button>}
+			{props.room.details.ownerId != props.state.user.uid && <button className="logout-btn">
+			    <i className="fas fa-times-circle"></i>
+			    Leave Room
+			</button>}
 		</div>
 	)
 }
