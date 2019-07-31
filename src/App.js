@@ -8,7 +8,22 @@ const messageArray =
     [
         {
             id: '123',
-            user: 'treblegni',room_id: '1',
+            user: 'treblegni',
+            room_id: '1',
+            content: 'dank memessssaksdmakmdad dsncdsknscskndsfds fs fsfsa fdsf saf afsa fadfjsa fajsf sjf sjv svsjv avljnalknca cads dlksfdsfs fsalfsad fsaflf saflsf dsafskf daf dsf dsf dsakf dsf asfasdjfnsfnsdsfdsf sdfdsfbcdv daskfsd fc',
+            time: '07/1/2019'
+        },
+        {
+            id: '123',
+            user: 'treblegni',
+            room_id: '1',
+            content: 'dank memessssaksdmakmdad dsncdsknscskndsfds fs fsfsa fdsf saf afsa fadfjsa fajsf sjf sjv svsjv avljnalknca cads dlksfdsfs fsalfsad fsaflf saflsf dsafskf daf dsf dsf dsakf dsf asfasdjfnsfnsdsfdsf sdfdsfbcdv daskfsd fc',
+            time: '07/1/2019'
+        },
+                    {
+            id: '123',
+            user: 'treblegni',
+            room_id: '1',
             content: 'dank memessssaksdmakmdad dsncdsknscskndsfds fs fsfsa fdsf saf afsa fadfjsa fajsf sjf sjv svsjv avljnalknca cads dlksfdsfs fsalfsad fsaflf saflsf dsafskf daf dsf dsf dsakf dsf asfasdjfnsfnsdsfdsf sdfdsfbcdv daskfsd fc',
             time: '07/1/2019'
         },
@@ -20,7 +35,7 @@ const messageArray =
             time: '07/1/2019'
         },
         {
-            id: 1,
+            id: '1',
             user: 'treblegni',
             room_id: '1',
             content:'hi there',
@@ -73,6 +88,7 @@ class App extends Component {
                 }
             },
             rooms: roomArray,
+            message: 'hello',
             messages: messageArray
         }
 
@@ -102,7 +118,12 @@ class App extends Component {
                 this.setState(status)
             },
             addMessage: (message) => {
-                this.setState(message)
+                let updatedMessages = messageArray
+                updatedMessages.push(message)
+                this.setState({messages: updatedMessages})
+            },
+            setMessage: (content) =>{
+                this.setState({message: content})
             }
         }
         this.authListener = this.authListener.bind(this);

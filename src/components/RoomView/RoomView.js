@@ -9,7 +9,7 @@ const RoomView = (props) => {
     return (
         <div className="room-view-container">
             <RoomMenu room={props.room} state={props.state} actions={props.actions}/>
-            <ChatView state={props.state}/>
+            <ChatView state={props.state} actions={props.actions}/>
         </div>
     )
 }
