@@ -20,9 +20,8 @@ class App extends Component {
                 backgroundColor: '#2ecc71'
             },
             joinVisible: false,
-            rooms: {},
-            subscriptions: [],
-            messages: []
+            ownedRooms: {},
+            subbedRooms: {}
         }
 
         this.actions = {
@@ -71,34 +70,41 @@ class App extends Component {
                     }
                 })
             },
-            joinPressed: () => {
-                this.setState({joinVisible: !this.state.joinVisible})
-            },
             joinRoom: (state) => {
                 console.log('joined')
             },
+            addMessage: (state,roomId) => {
+                const messagesRef = db.ref(`rooms/${roomId}/messages`)
+                const newId = messagesRef.push().key
+                state.id = newId
+
+                messagesRef.update({
+                    [newId]: state
+                })
+            },
+            deleteMessage: () => {
+
+            },
+            joinPressed: () => {
+                this.setState({joinVisible: !this.state.joinVisible})
+            },
             setStatus: (status) => {
                 this.setState({status: status})
-            },
-            addMessage: (message) => {
-                this.setState({message: message})
-            },
-            loadMessages: (roomID) => {
-                this.loadMessages(roomID)
             }
         }
         this.authListener = this.authListener.bind(this)
     }
 
     componentDidMount() {
-        this.authListener();
+        this.authListener() 
     }
 
     authListener() {
         fire.auth().onAuthStateChanged((user) => {
             if (user) {
                 this.setState({ user })
-                this.loadRooms()
+                this.loadOwnedRooms()
+                this.loadSubbedRooms()
                 
             } else {
                 this.setState({ user: null })
@@ -106,11 +112,23 @@ class App extends Component {
         })
     }
 
-    loadRooms() {
+    loadOwnedRooms() {
         const roomsRef = fire.database().ref('rooms').orderByChild('details/ownerId').equalTo(this.state.user.uid)
 
         roomsRef.on("value", (snapshot) => {
-                this.setState({rooms: snapshot.val()})
+                this.setState(({ownedRooms: snapshot.val()}))
+            },
+            function (errorObject) {
+                console.log("The read failed: " + errorObject.code)
+            }
+        )
+    }
+
+    loadSubbedRooms() {
+        const subRoomsRef = fire.database().ref('rooms').orderByChild('members/ids').equalTo(this.state.user.uid)
+
+        subRoomsRef.on("value", (snapshot) => {
+                this.setState(({subbedRooms: snapshot.val()}))
             },
             function (errorObject) {
                 console.log("The read failed: " + errorObject.code)

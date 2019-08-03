@@ -14,7 +14,7 @@ const MessageBox = (props) => {
 			<div className="inner-userInput-content">
 				<a className="username-message">{props.message.user}</a>
 				<a className="mess-timestamp"> {props.message.time}</a>
-				<p>{props.message.content}</p>
+				<p>{props.message.message}</p>
 			</div>
 		</div>
 	)

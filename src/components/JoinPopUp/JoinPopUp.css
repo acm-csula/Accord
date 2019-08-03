@@ -4,8 +4,8 @@
     background-color: #ecf0f1;
     z-index: 2;
     position: absolute;
-    margin-left: 34%;
-    margin-top: 10%;
+    margin-left: 28vw;
+    margin-top: 18vh;
     border-radius: 15px;
     box-shadow: 0 2px 60px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
