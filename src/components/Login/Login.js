@@ -46,7 +46,7 @@ class login extends React.Component {
                     <br/>
                     <button className="login-btn" onClick={this.login}> Login </button>
                     <br/>
-                    <button className="create-btn" onClick={this.createAccount}> Don't have an account?  </button>
+                    <button className="create-btn" onClick={this.createAccount}> Create Account  </button>
                 </div>
             </div>
         )
