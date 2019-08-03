@@ -6,13 +6,13 @@ body{
 }
 
 .login-container{
-  width: 30rem;
-  height: 40rem;
+  width: 25rem;
+  height: 35rem;
   background-color: #ecf0f1;
   border-radius: 10px;
   position: absolute;
   margin: auto;
-  top: 0;
+  top: 4rem;
   left: 0;
   bottom: 0;
   right: 0;
@@ -42,9 +42,14 @@ body{
 }
 
 .login-logo{
-  width: 30rem;
-  bottom: 12rem;
+  width: 20rem;
+  bottom: 8rem;
   position: relative;
+}
+
+.post-container{
+  position: relative;
+  bottom: 8rem;
 }
 
 .input-field{
@@ -63,9 +68,4 @@ body{
 
 #password{
   margin-bottom: 2rem;
-}
-
-.post-container{
-  position: relative;
-  bottom: 12rem;
 }

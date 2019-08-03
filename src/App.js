@@ -84,6 +84,8 @@ class App extends Component {
                     }
                 }
                 if (!conflict) {
+                    console.log('passed')
+                    console.log(inviteCode.substring(15,inviteCode.length))
                     const membersRef = db.ref(`rooms/${inviteCode.substring(15,inviteCode.length)}/members`)
                     const date = new Date()
                     const month = date.getMonth() + 1
@@ -92,6 +94,7 @@ class App extends Component {
 
                     membersRef.update({
                         [this.state.user.uid]: {
+                            memberId: this.state.user.uid,
                             displayName: this.state.user.displayName,
                             email: this.state.user.email,
                             joined: createdOn
@@ -136,10 +139,12 @@ class App extends Component {
                 this.setState({ user: null })
             }
         })
+
+
     }
 
     loadOwnedRooms() {
-        const roomsRef = fire.database().ref('rooms').orderByChild('details/ownerId').equalTo(this.state.user.uid)
+        const roomsRef = db.ref('rooms').orderByChild('details/ownerId').equalTo(this.state.user.uid)
 
         roomsRef.on("value", (snapshot) => {
                 this.setState(({ownedRooms: snapshot.val()}))
@@ -151,9 +156,10 @@ class App extends Component {
     }
 
     loadSubbedRooms() {
-        const subRoomsRef = fire.database().ref('rooms').orderByChild('members/ids').equalTo(this.state.user.uid)
+        const subRoomsRef = db.ref('rooms').orderByChild(`members/${this.state.user.uid}/memberId`).equalTo(this.state.user.uid)
 
         subRoomsRef.on("value", (snapshot) => {
+                console.log('queued')
                 this.setState(({subbedRooms: snapshot.val()}))
             },
             function (errorObject) {
@@ -163,7 +169,7 @@ class App extends Component {
     }
 
     loadSubscriptions() {
-        const subsRef = fire.database().ref('subscriptions').orderByChild('subscriberId').equalTo(this.state.user.uid)
+        const subsRef = db.ref('subscriptions').orderByChild('subscriberId').equalTo(this.state.user.uid)
 
         subsRef.on("value", (snapshot) => {
                 this.setState({subscriptions: snapshot.val()})
