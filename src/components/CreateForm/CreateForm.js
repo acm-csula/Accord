@@ -36,6 +36,7 @@ class CreateForm extends React.Component {
 		e.preventDefault()
 
 		if (this.state.name.length > 0 && this.state.welcomeMessage.length > 0) {
+			this.props.actions.plusPressed()
 			this.props.actions.createRoom(this.state)
 		}
 	}

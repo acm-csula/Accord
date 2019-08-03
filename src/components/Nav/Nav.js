@@ -32,7 +32,7 @@ const Nav = (props) => {
                 {ownedRooms}
                 {subbedRooms}
                 <div className="join-server">
-                    <button onClick={props.actions.joinPressed}><i className="fas fa-plus"></i></button>
+                    <button onClick={props.actions.plusPressed}><i className="fas fa-plus"></i></button>
                 </div>
             </div>
         </div>

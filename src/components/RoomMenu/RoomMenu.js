@@ -1,6 +1,6 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import SubMenu from '../SubMenu/SubMenu'
+import RoomSubMenu from '../RoomSubMenu/RoomSubMenu'
 import ChannelPanel from '../ChannelPanel/ChannelPanel'
 
 import './RoomMenu.css'
@@ -39,16 +39,16 @@ class RoomMenu extends React.Component {
 	render() {
 		return (
 			<div className='room-menu-container'>
-				<div className="server-title-header" style={this.state.openedMenuStyle}>
+				<div className="server-title-header" style={this.state.openedMenuStyle} onClick={this.actions.onPress}>
 					<a className="server-title">{this.props.room.details.name}
-					<i className="fas fa-sort-down" onClick={this.actions.onPress}></i></a>
+					<i className="fas fa-sort-down"></i></a>
 					<div className="username-stats">
 						<i style={this.props.state.status.green}></i>
 						<a>{this.props.state.user.email}</a>
 					</div>
 				</div>
 				<ChannelPanel/>
-				{this.state.menuPressed && <SubMenu state={this.props.state} actions={this.props.actions} room={this.props.room}/>}
+				{this.state.menuPressed && <RoomSubMenu state={this.props.state} actions={this.props.actions} room={this.props.room}/>}
             </div>
 		)
 	}

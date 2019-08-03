@@ -45,3 +45,21 @@
     left: 5rem;
     top: 0.7rem;
 }
+
+.invite-container {
+    position: absolute;
+    width: 20rem;
+    height: 1rem;
+    border: none;
+    border-radius: 8px;
+    left: 16rem;
+    top: 1.4rem;
+}
+
+.invite-container > input {
+    text-align: center;
+    width: 30rem;
+    border: none;
+    border-radius: inherit;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}

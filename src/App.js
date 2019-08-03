@@ -70,8 +70,34 @@ class App extends Component {
                     }
                 })
             },
-            joinRoom: (state) => {
-                console.log('joined')
+            joinRoom: (inviteCode) => {
+                let conflict = false
+
+                if (this.state.ownedRooms) {
+                    if (this.state.ownedRooms.hasOwnProperty(inviteCode.substring(15,inviteCode.length))) {
+                        conflict = true
+                    }
+                }
+                if (this.state.subbedRooms) {
+                    if (this.state.subbedRooms.hasOwnProperty(inviteCode.substring(15,inviteCode.length))) {
+                        conflict = true
+                    }
+                }
+                if (!conflict) {
+                    const membersRef = db.ref(`rooms/${inviteCode.substring(15,inviteCode.length)}/members`)
+                    const date = new Date()
+                    const month = date.getMonth() + 1
+
+                    const createdOn = month + '/' + date.getDate() + '/' + date.getFullYear()
+
+                    membersRef.update({
+                        [this.state.user.uid]: {
+                            displayName: this.state.user.displayName,
+                            email: this.state.user.email,
+                            joined: createdOn
+                        }
+                    })
+                }
             },
             addMessage: (state,roomId) => {
                 const messagesRef = db.ref(`rooms/${roomId}/messages`)
@@ -85,7 +111,7 @@ class App extends Component {
             deleteMessage: () => {
 
             },
-            joinPressed: () => {
+            plusPressed: () => {
                 this.setState({joinVisible: !this.state.joinVisible})
             },
             setStatus: (status) => {

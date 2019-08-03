@@ -26,7 +26,7 @@ class JoinPopUp extends React.Component {
 	render() {
 		return (
 			<div className="join-pop-up-container">
-				<div className='close-icon'><i className="fas fa-times" onClick={this.props.actions.joinPressed}></i></div>
+				<div className='close-icon'><i className="fas fa-times" onClick={this.props.actions.plusPressed}></i></div>
                 {!this.state.joinSelected && !this.state.createSelected && <JoinPopUpMenu state={this.state} actions={this.actions}/>}
                 {this.state.joinSelected && <JoinForm state={this.props.state} actions={this.props.actions}/>}
                 {this.state.createSelected && <CreateForm state={this.props.state} actions={this.props.actions}/>}

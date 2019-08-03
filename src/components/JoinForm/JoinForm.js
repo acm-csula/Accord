@@ -7,35 +7,31 @@ class JoinForm extends React.Component {
 		super(props)
 
 		this.state = {
-			name: '',
-			welcomeMesage: '',
-			ownerId: '',
-			created: ''
+			inviteCode: ''
 		}
 
-		this.updateName = this.updateName.bind(this)
-		this.updateMessage = this.updateMessage.bind(this)
+		this.handleInput = this.handleInput.bind(this)
 		this.joinRoom = this.joinRoom.bind(this)
 	}
 
-	updateName(e) {
-		this.setState({nameInput: e.target.value})
-	}
-
-	updateMessage(e) {
-		this.setState({welcomeMesage: e.target.value})
+	handleInput(e) {
+		this.setState({inviteCode: e.target.value})
 	}
 
 	joinRoom(e) {
 		e.preventDefault()
-		this.props.actions.joinRoom(this.state)
+		
+		if (this.state.inviteCode.length > 0) {
+			this.props.actions.plusPressed()
+			this.props.actions.joinRoom(this.state.inviteCode)
+		}	
 	}
 
 	render() {
 		return (
 			<div className='join-form-container'>
 				<form>
-					<input className="join-form-input" placeholder="Invite URL" type="text" value={this.state.name} onChange={this.updateName}/>
+					<input className="join-form-input" placeholder="Invite URL" type="text" value={this.state.inviteCode} onChange={this.handleInput}/>
                     <br/>
                     <button className="join-form-btn" onClick={this.joinRoom}>Join</button>
 				</form>
