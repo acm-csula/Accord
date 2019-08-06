@@ -1,9 +1,9 @@
 import React from 'react'
 import MessageBox from '../MessageBox/MessageBox'
 
-import './ChatView.css'
+import './ChatClient.css'
 
-class ChatView extends React.Component {
+class ChatClient extends React.Component {
 	constructor(props) {
 		super(props)
 
@@ -69,4 +69,4 @@ class ChatView extends React.Component {
 	}
 }
 
-export default ChatView
+export default ChatClient
