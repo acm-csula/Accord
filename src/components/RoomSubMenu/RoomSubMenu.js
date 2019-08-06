@@ -3,29 +3,22 @@ import React from 'react'
 import './RoomSubMenu.css'
 
 class RoomSubMenu extends React.Component {
-	constructor(props) {
-		super(props)
-
-		this.state = {
-			hovering: false,
-			inviteCode: this.props.room.details.id
-		}
-
-		this.handleOnMouseOver = this.handleOnMouseOver.bind(this)
-		this.handleOnMouseLeave = this.handleOnMouseLeave.bind(this)
+	state = {
+		hovering: false,
+		inviteCode: this.props.room.details.id
 	}
 
-	handleOnMouseOver() {
+	handleOnMouseOver = () => {
 		this.setState({hovering: true})
 	}
 
-	handleOnMouseLeave() {
+	handleOnMouseLeave = () => {
 		this.setState({hovering: false})
 	}
 
 	render() {
 		return (
-	    	<div className="user-menu">
+	    	<div className="user-menu" onMouseLeave={this.props.actions.handleOnMouseLeave}>
 	    		{this.state.hovering && <div className='invite-container'><input value={'localhost:3000/' + this.state.inviteCode} onMouseLeave={this.handleOnMouseLeave}></input></div>}
 				<button className="user-stats-online" onMouseOver={this.handleOnMouseOver}>
 				<i className="far fa-paper-plane" onClick={this.props.actions.sendInvite}></i>

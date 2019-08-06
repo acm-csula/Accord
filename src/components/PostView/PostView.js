@@ -3,7 +3,6 @@ import {BrowserRouter,Route} from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import HomeView from '../HomeView/HomeView'
 import RoomView from '../RoomView/RoomView'
-import JoinPopUp from '../JoinPopUp/JoinPopUp'
 
 import './PostView.css'
 
@@ -34,7 +33,6 @@ const PostView = (props) => {
                 <Route exact path='/home' render={() => <HomeView state={props.state} actions={props.actions}/>}/>
                 {ownedRooms}
                 {subbedRooms}
-                {props.state.joinVisible && <JoinPopUp state={props.state} actions={props.actions}/>}
             </div>
         </BrowserRouter>
     )

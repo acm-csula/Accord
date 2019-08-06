@@ -4,36 +4,27 @@ import './Login.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class login extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            emailInput: '',
-            passwordInput: ''
-        }
-        
-        this.login = this.login.bind(this)
-        this.createAccount = this.createAccount.bind(this)
-        this.updateEmailInput = this.updateEmailInput.bind(this)
-        this.updatePasswordInput = this.updatePasswordInput.bind(this)
+    state = {
+        emailInput: '',
+        passwordInput: ''
     }
 
-    login(){
+    login = () => {
         this.props.actions.login(this.state.emailInput,this.state.passwordInput)
         this.setState({emailInput: '',passwordInput: ''})
     }
 
-    createAccount(){
-        this.props.actions.createAccount(this.state.emailInput,this.state.passwordInput)
-        this.setState({emailInput: '', passwordInput: ''})
-    }
-
-    updateEmailInput(e) {
+    updateEmailInput = (e) =>  {
         this.setState({emailInput: e.target.value})
     }
 
-    updatePasswordInput(e) {
+    updatePasswordInput = (e) => {
         this.setState({passwordInput: e.target.value})
+    }
+
+    createAccount = () => {
+        this.props.actions.createAccount(this.state.emailInput,this.state.passwordInput)
+        this.setState({emailInput: '', passwordInput: ''})
     }
 
     render(){

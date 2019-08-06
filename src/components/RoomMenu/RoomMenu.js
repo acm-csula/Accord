@@ -6,16 +6,35 @@ import ChannelPanel from '../ChannelPanel/ChannelPanel'
 import './RoomMenu.css'
 
 class RoomMenu extends React.Component {
-	constructor(props) {
-		super(props)
+	state = {
+		serverTitle: '',
+		subMenuOpened: false,
+		openedMenuStyle: null
+	}
 
-		this.state = {
-			serverTitle: '',
-			menuPressed: false,
-			openedMenuStyle: null
+	actions = {
+		handleOnMouseLeave: () => {
+			this.setState({subMenuOpened: false})
 		}
+	}
 
-		this.handleOnClick = this.handleOnClick.bind(this)
+	handleSubMenuOnClick = () => {
+		const negated = !this.state.subMenuOpened
+
+		if (this.state.openedMenuStyle == null) {
+			this.setState({
+				subMenuOpened: negated,
+				openedMenuStyle: {
+					backgroundColor: '#232d38'
+				}
+			})
+		}
+		else {
+			this.setState({
+				subMenuOpened: negated,
+				openedMenuStyle: null
+			})
+		}
 	}
 
 	componentDidMount() {
@@ -28,29 +47,10 @@ class RoomMenu extends React.Component {
 		}
 	}
 
-	handleOnClick() {
-		let negate = !this.state.menuPressed
-        
-		if (this.state.openedMenuStyle == null) {
-			this.setState({
-				menuPressed: negate,
-				openedMenuStyle: {
-					backgroundColor: '#232d38'
-				}
-			})
-		}
-		else {
-			this.setState({
-				menuPressed: negate,
-				openedMenuStyle: null
-			})
-		}
-	}
-
 	render() {
 		return (
 			<div className='room-menu-container'>
-				<div className="server-title-header" style={this.state.openedMenuStyle} onClick={this.handleOnClick}>
+				<div className="server-title-header" style={this.state.openedMenuStyle} onClick={this.handleSubMenuOnClick}>
 					<a className="server-title">{this.state.serverTitle}<i className="fas fa-sort-down"></i></a>
 					<div className="username-stats">
 						<i style={this.props.state.status.green}></i>
@@ -58,7 +58,7 @@ class RoomMenu extends React.Component {
 					</div>
 				</div>
 				<ChannelPanel/>
-				{this.state.menuPressed && <RoomSubMenu state={this.props.state} actions={this.props.actions} room={this.props.room}/>}
+				{this.state.subMenuOpened && <RoomSubMenu state={this.props.state} actions={this.actions} room={this.props.room}/>}
             </div>
 		)
 	}
