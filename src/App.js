@@ -103,14 +103,35 @@ class App extends Component {
                 })
             }
         },
-        addMessage: (state,roomId) => {
+        deleteRoom: (roomId) => {
+            const roomsRef = db.ref(`rooms`)
+
+            roomsRef.child(roomId).remove()
+        },
+        leaveRoom: (userId,roomId) => {
+            const messagesRef = db.ref(`rooms/${roomId}/messages`)
+
+            console.log('not working')
+
+            messagesRef.child(userId).remove()
+        },
+        sendMessage: (state,roomId) => {
             const messagesRef = db.ref(`rooms/${roomId}/messages`)
             const newId = messagesRef.push().key
+            const date = new Date()
+            const month = date.getMonth() + 1
+            const createdOn = month + '/' + date.getDate() + '/' + date.getFullYear()
+
             state.id = newId
+            state.user = this.state.user.displayName
+            state.created = createdOn
 
             messagesRef.update({
                 [newId]: state
             })
+        },
+        sendInvite: () => {
+            console.log('invite sent')
         },
         deleteMessage: () => {
 

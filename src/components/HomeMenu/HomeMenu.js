@@ -6,57 +6,53 @@ import './HomeMenu.css'
 import defaultImage from './0.png'  
 
 class HomeMenu extends React.Component {
-	constructor(props) {
-		super(props)
-    
-		this.state = {
-			status: [
-                {
-                    display: 'inline-block',
-                    height: '14px',
-                    width: '14px',
-                    borderRadius: '50%',
-                    marginRight: '0.5rem',
-                    backgroundColor: '#2ecc71'
-                },
-                {
-                    display: 'inline-block',
-                    height: '14px',
-                    width: '14px',
-                    borderRadius: '50%',
-                    marginRight: '0.5rem',
-                    backgroundColor: 'yellow'
-                },
-                {
-                    display: 'inline-block',
-                    height: '14px',
-                    width: '14px',
-                    borderRadius: '50%',
-                    marginRight: '0.5rem',
-                    backgroundColor: 'red'
-                }
-            ],
-            statusIndex: 0
-		}
-
-		this.actions = {
-			openUserSettings: () => {
-				console.log('hey')
-			}
-		}
-
-		this.updateStatus = this.updateStatus.bind(this)
+	state = {
+		status: [
+            {
+                display: 'inline-block',
+                height: '14px',
+                width: '14px',
+                borderRadius: '50%',
+                marginRight: '0.5rem',
+                backgroundColor: '#2ecc71'
+            },
+            {
+                display: 'inline-block',
+                height: '14px',
+                width: '14px',
+                borderRadius: '50%',
+                marginRight: '0.5rem',
+                backgroundColor: 'yellow'
+            },
+            {
+                display: 'inline-block',
+                height: '14px',
+                width: '14px',
+                borderRadius: '50%',
+                marginRight: '0.5rem',
+                backgroundColor: 'red'
+            }
+        ],
+        statusIndex: 0
 	}
 
-	updateStatus() {
+	actions = {
+		openUserSettings: () => {
+			console.log('hey')
+		}
+	}
+
+	updateStatus = () => {
+		const index = this.state.statusIndex + 1
+
 		if (this.state.statusIndex == 2) {
 			this.setState({statusIndex: 0})
+			this.props.actions.setStatus(this.state.status[0])
 		}
 		else {
-			this.setState({statusIndex: this.state.statusIndex + 1})
+			this.setState({statusIndex: index})
+			this.props.actions.setStatus(this.state.status[index])
 		}
-		
-		this.props.actions.setStatus(this.state.status[this.state.statusIndex])	
 	}
 
 	render() {

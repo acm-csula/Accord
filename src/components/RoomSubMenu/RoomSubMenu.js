@@ -18,10 +18,10 @@ class RoomSubMenu extends React.Component {
 
 	render() {
 		return (
-	    	<div className="user-menu" onMouseLeave={this.props.actions.handleOnMouseLeave}>
+	    	<div className="user-menu">
 	    		{this.state.hovering && <div className='invite-container'><input value={'localhost:3000/' + this.state.inviteCode} onMouseLeave={this.handleOnMouseLeave}></input></div>}
-				<button className="user-stats-online" onMouseOver={this.handleOnMouseOver}>
-				<i className="far fa-paper-plane" onClick={this.props.actions.sendInvite}></i>
+				<button className="user-stats-online" onMouseOver={this.handleOnMouseOver} onClick={this.props.actions.sendInvite}>
+				<i className="far fa-paper-plane"></i>
 					Send Invite
 				</button>
 				<hr></hr>
@@ -36,11 +36,11 @@ class RoomSubMenu extends React.Component {
 				</button>
 				<hr></hr>
 				<div className="divider"></div>
-				{this.props.room.details.ownerId == this.props.state.user.uid && <button className="logout-btn">
+				{this.props.room.details.ownerId == this.props.state.user.uid && <button className="logout-btn" onClick={this.props.actions.deleteRoom}>
 				    <i className="fas fa-times-circle"></i>
 				    Close Room
 				</button>}
-				{this.props.room.details.ownerId != this.props.state.user.uid && <button className="logout-btn">
+				{this.props.room.details.ownerId != this.props.state.user.uid && <button className="logout-btn" onClick={this.props.actions.leaveRoom}>
 				    <i className="fas fa-times-circle"></i>
 				    Leave Room
 				</button>}

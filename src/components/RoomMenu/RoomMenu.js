@@ -13,8 +13,14 @@ class RoomMenu extends React.Component {
 	}
 
 	actions = {
-		handleOnMouseLeave: () => {
-			this.setState({subMenuOpened: false})
+		sendInvite: () => {
+			this.props.actions.sendInvite()
+		},
+		deleteRoom: () => {
+			this.props.actions.deleteRoom(this.props.room.details.id)
+		},
+		leaveRoom: () => {
+			this.props.actions.leaveRoom(this.props.state.user.uid,this.props.room.details.id)
 		}
 	}
 

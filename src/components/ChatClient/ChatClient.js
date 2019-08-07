@@ -4,23 +4,27 @@ import MessageBox from '../MessageBox/MessageBox'
 import './ChatClient.css'
 
 class ChatClient extends React.Component {
-	constructor(props) {
-		super(props)
+	state = {
+		id: '',
+		message: '',
+		user: '',
+		created: ''
+	}
 
-		const date = new Date()
-		const month = date.getMonth() + 1
+	updateMessage = (e) => {
+		this.setState({message: e.target.value})
+	}
 
-		this.createdOn = month + '/' + date.getDate() + '/' + date.getFullYear()
-
-		this.state = {
-			id: '',
-			message: '',
-			user: this.props.state.user.displayName,
-			created: this.createdOn
+	sendMessage = (e) => {
+		if (e.keyCode == 13 && e.target.value.length > 0) {
+			this.props.actions.sendMessage(this.state,this.props.room.details.id)
+			this.setState({message: ''})
 		}
+	}
 
-		this.updateMessage = this.updateMessage.bind(this)
-		this.sendMessage = this.sendMessage.bind(this)
+	autoScroll = () => {
+		const element = document.getElementById('scrollView');
+   		element.scrollTop = element.scrollHeight
 	}
 
 	componentDidMount() {
@@ -28,16 +32,9 @@ class ChatClient extends React.Component {
    		element.scrollTop = element.scrollHeight
    	}
 
-	updateMessage(e) {
-		this.setState({message: e.target.value})
-	}
-
-	sendMessage(e) {
-		if (e.keyCode == 13 && e.target.value.length > 0) {
-			this.props.actions.addMessage(this.state,this.props.room.details.id)
-			const element = document.getElementById('scrollView');
-   			element.scrollTop = element.scrollHeight
-		}
+   	componentDidUpdate() {
+  		const element = document.getElementById('scrollView');
+   		element.scrollTop = element.scrollHeight
 	}
 
 	render() {
@@ -61,7 +58,7 @@ class ChatClient extends React.Component {
 				</div>
 				<div className="bottom-container">
 					<div className="sender-container">
-						<input className="message-field" placeholder="Message #general" type="text" content={this.state.message} onChange={this.updateMessage} onKeyDown={this.sendMessage}/>
+						<input className="message-field" placeholder="Message #general" type="text" value={this.state.message} onChange={this.updateMessage} onKeyDown={this.sendMessage}/>
 					</div>
 				</div>
 			</div>
