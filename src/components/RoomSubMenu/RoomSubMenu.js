@@ -1,5 +1,7 @@
 import React from 'react'
 
+import AddUserPopUp from '../InvitePopUp/InvitePopUp'
+
 import './RoomSubMenu.css'
 
 class RoomSubMenu extends React.Component {
@@ -21,7 +23,7 @@ class RoomSubMenu extends React.Component {
 	    	<div className="user-menu">
 	    		{this.state.hovering && <div className='invite-container'><input value={'localhost:3000/' + this.state.inviteCode} onMouseLeave={this.handleOnMouseLeave}></input></div>}
 				<button className="user-stats-online" onMouseOver={this.handleOnMouseOver} onClick={this.props.actions.sendInvite}>
-				<i className="far fa-paper-plane"></i>
+					<i className="fas fa-paper-plane"></i>
 					Send Invite
 				</button>
 				<hr></hr>
