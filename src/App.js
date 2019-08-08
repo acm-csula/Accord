@@ -61,7 +61,8 @@ class App extends Component {
             const newId = roomsRef.push().key
             const date = new Date()
             const month = date.getMonth() + 1
-            const createdOn = month + '/' + date.getDate() + '/' + date.getFullYear()
+            const time = date.getTime()
+            const createdOn = month + '/' + date.getDate() + '/' + date.getFullYear() + '  @' + time
 
             roomDetails.id = newId
             roomDetails.ownerId = this.state.user.uid
@@ -90,8 +91,8 @@ class App extends Component {
                 const membersRef = db.ref(`rooms/${inviteCode.substring(15,inviteCode.length)}/members`)
                 const date = new Date()
                 const month = date.getMonth() + 1
-
-                const createdOn = month + '/' + date.getDate() + '/' + date.getFullYear()
+                const time = date.getTime()
+                const createdOn = month + '/' + date.getDate() + '/' + date.getFullYear() + '  @' + time
 
                 membersRef.update({
                     [this.state.user.uid]: {
@@ -109,18 +110,17 @@ class App extends Component {
             roomsRef.child(roomId).remove()
         },
         leaveRoom: (userId,roomId) => {
-            const messagesRef = db.ref(`rooms/${roomId}/messages`)
+            const membersRef = db.ref(`rooms/${roomId}/members`)
 
-            console.log('not working')
-
-            messagesRef.child(userId).remove()
+            membersRef.child(userId).remove()
         },
         sendMessage: (state,roomId) => {
             const messagesRef = db.ref(`rooms/${roomId}/messages`)
             const newId = messagesRef.push().key
             const date = new Date()
             const month = date.getMonth() + 1
-            const createdOn = month + '/' + date.getDate() + '/' + date.getFullYear()
+            const time = date.getTime()
+            const createdOn = month + '/' + date.getDate() + '/' + date.getFullYear() + '  @' + time
 
             state.id = newId
             state.user = this.state.user.displayName

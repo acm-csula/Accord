@@ -6,14 +6,15 @@ body{
 }
 
 .login-container{
-  width: 25rem;
-  height: 35rem;
+  width: 22rem;
+  height: 32rem;
   background-color: #ecf0f1;
   border-radius: 10px;
   position: absolute;
-  margin: auto;
-  top: 4rem;
-  left: 0;
+  margin-left: -11rem;
+  margin-top: -16rem;
+  top: 50vh;
+  left: 50vw;
   bottom: 0;
   right: 0;
 }

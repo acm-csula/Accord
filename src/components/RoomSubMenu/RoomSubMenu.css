@@ -48,17 +48,19 @@
 
 .invite-container {
     position: absolute;
+    outline: none;
     width: 20rem;
     height: 1rem;
     border: none;
     border-radius: 8px;
-    left: 16rem;
+    left: 8rem;
     top: 1.4rem;
 }
 
 .invite-container > input {
     text-align: center;
-    width: 30rem;
+    outline: none;
+    width: inherit;
     border: none;
     border-radius: inherit;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);

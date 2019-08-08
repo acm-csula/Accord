@@ -14,6 +14,12 @@ class login extends React.Component {
         this.setState({emailInput: '',passwordInput: ''})
     }
 
+    handleKeyDown = (e) => {
+        if (e.keyCode == 13) {
+            this.login()
+        }
+    }
+
     updateEmailInput = (e) =>  {
         this.setState({emailInput: e.target.value})
     }
@@ -32,8 +38,8 @@ class login extends React.Component {
             <div className="login-container" style={{textAlign: 'center'}}>
                 <img className="login-logo" src={logo}/>
                 <div className="post-container">
-                    <input className="input-field" placeholder="Email" type="text" value={this.state.emailInput} onChange={this.updateEmailInput}/>
-                    <input className="input-field" placeholder="Password" type="password" value={this.state.passwordInput} onChange={this.updatePasswordInput}/>
+                    <input className="input-field" placeholder="Email" type="text" value={this.state.emailInput} onChange={this.updateEmailInput} onKeyDown={this.handleKeyDown}/>
+                    <input className="input-field" placeholder="Password" type="password" value={this.state.passwordInput} onChange={this.updatePasswordInput} onKeyDown={this.handleKeyDown}/>
                     <br/>
                     <button className="login-btn" onClick={this.login}> Login </button>
                     <br/>

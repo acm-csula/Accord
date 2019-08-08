@@ -1,10 +1,29 @@
 .nav-container {
     display: inline-block;
     text-align: center;
-    width: 5.5rem;
+    width: 5rem;
     height: 100vh;
     overflow-y: auto;
     background-color: #1a2530;
+}
+
+.nav-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.nav-container::-webkit-scrollbar-track {
+    background-color: #1a2530;
+}
+
+/* Handle */
+.nav-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.nav-container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .home-local i{
@@ -13,11 +32,13 @@
 }
 
 .home-local button {
+    outline: none;
     width: 3.5rem;
     height: 3.5rem;
     border-width: inherit;
     border-radius: 50%;
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: #232d38;
     transition: all 0.5s ease-in-out;
 }
@@ -26,11 +47,16 @@
     border-radius: 20px;
 }
 
+.home-local button:focus{
+    border-radius: 20px;
+}
+
 .client-servers{
     display: grid;
 }
 
 .client-servers button{
+    outline: none;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -47,17 +73,26 @@
     border-radius: 20px;
 }
 
-.join-server button:hover{
+.client-servers button:focus{
     border-radius: 20px;
 }
 
 .join-server button{
+    outline: none;
     border-radius: 50%;
     height: 3.5rem;
     background-color: #232d38;
     color: white;
     font-size: 1.5rem;
     transition: all 0.5s ease-in-out;
+}
+
+.join-server button:hover{
+    border-radius: 20px;
+}
+
+.join-server button:focus{
+    border-radius: 20px;
 }
 
 .createRoom-container{

@@ -22,6 +22,12 @@ class Nav extends React.Component {
         }
     }
 
+    handleOnClick = () => {
+        if (this.state.joinVisible == true) {
+            this.setState({joinVisible: false})
+        }
+    }
+
     render() {
         const ownedRooms = []
         const subbedRooms = []
@@ -43,7 +49,7 @@ class Nav extends React.Component {
         }
 
         return (
-            <div className='nav-container'>
+            <div className='nav-container' onClick={this.handleOnClick}>
                 <div className="home-local">
                     <Link to='/home'><button><i className="fas fa-home"></i></button></Link>
                 </div>

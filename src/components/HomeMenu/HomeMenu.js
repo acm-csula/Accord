@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom'
 
 import './HomeMenu.css'
 
-import defaultImage from './0.png'  
+import defaultImage from './blank_pfp.png'  
 
 class HomeMenu extends React.Component {
 	state = {

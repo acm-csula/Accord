@@ -31,13 +31,32 @@
     margin-left: 1rem;
 }
 
-.message-container{
+.message-container {
     bottom: 4rem;
     width: 100%;
     padding: 1rem;
     height: calc(100% - 9rem);
     vertical-align: bottom;
     overflow: auto;
+}
+
+.message-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+.message-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.message-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.message-container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .bottom-container{

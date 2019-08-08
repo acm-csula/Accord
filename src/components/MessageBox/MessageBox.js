@@ -13,7 +13,7 @@ const MessageBox = (props) => {
 			</div>
 			<div className="inner-userInput-content">
 				<a className="username-message">{props.message.user}</a>
-				<a className="mess-timestamp"> {props.message.time}</a>
+				<a className="mess-timestamp"> {props.message.created.substring(0,10)}</a>
 				<p>{props.message.message}</p>
 			</div>
 		</div>

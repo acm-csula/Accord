@@ -16,9 +16,8 @@
 }
 
 .icon {    
-    border: 4px solid black;
     border-radius: 50%;
-    width: 100px;
+    width: 10rem;
 }
 
 .nameField {
@@ -55,23 +54,23 @@
     background-color: inherit;
 }
 
-.user-panel{
+.user-panel {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
 
 .user-panel button{
-    margin-top: 1rem;
-    width: 95%;
+    width: 100%;
     padding: 0.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    background-color: #24303b;
+    background-color: #253443;
     border-width: inherit;
     color: white;
-    border-radius: 5px;
     text-align: left;
+    margin-bottom: 0.1rem;
 }
 
 .user-panel i{
