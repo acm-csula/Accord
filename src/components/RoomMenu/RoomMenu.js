@@ -1,7 +1,6 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
 import RoomSubMenu from '../RoomSubMenu/RoomSubMenu'
-import ChannelPanel from '../ChannelPanel/ChannelPanel'
 
 import './RoomMenu.css'
 
@@ -43,6 +42,10 @@ class RoomMenu extends React.Component {
 		}
 	}
 
+	handleOuterClick = () => {
+		this.setState({subMenuOpened: false})
+	}
+
 	componentDidMount() {
 		if (this.props.room.details.name.length > 16) {
 			const title = this.props.room.details.name.substring(0,16) + '...'
@@ -63,7 +66,15 @@ class RoomMenu extends React.Component {
 						<a>{this.props.state.user.email}</a>
 					</div>
 				</div>
-				<ChannelPanel/>
+				<div className='channel-container' onClick={this.handleOuterClick}>
+		    		<h6> Channels </h6>
+		            <div className="channel-btns">
+		                <button className="channel-btn">
+		                    <i className="fas fa-hashtag"></i> 
+		                    <a> {'general'}</a>
+		                </button>
+		            </div>
+		        </div>
 				{this.state.subMenuOpened && <RoomSubMenu state={this.props.state} actions={this.actions} room={this.props.room}/>}
             </div>
 		)
