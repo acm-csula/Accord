@@ -49,11 +49,11 @@ class Nav extends React.Component {
         }
 
         return (
-            <div className='nav-container' onClick={this.handleOnClick}>
-                <div className="home-local">
+            <div className='nav-container'>
+                <div className="home-local" onClick={this.handleOnClick}>
                     <Link to='/home'><button><i className="fas fa-home"></i></button></Link>
                 </div>
-                <div className="client-servers">
+                <div className="client-servers" onClick={this.handleOnClick}>
                     {ownedRooms}
                     {subbedRooms}
                     <div className="join-server">

@@ -11,13 +11,13 @@
 }
 
 .iconView {
-    margin: 20px;
+    margin: 2rem;
     width: inherit;
 }
 
 .icon {    
     border-radius: 50%;
-    width: 10rem;
+    width: 8.5rem;
 }
 
 .nameField {
