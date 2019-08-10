@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faHome,faPlus} from '@fortawesome/free-solid-svg-icons'
 
 import JoinPopUp from '../JoinPopUp/JoinPopUp'
 
@@ -51,13 +53,13 @@ class Nav extends React.Component {
         return (
             <div className='nav-container'>
                 <div className="home-local" onClick={this.handleOnClick}>
-                    <Link to='/home'><button><i className="fas fa-home"></i></button></Link>
+                    <Link to='/home'><button><FontAwesomeIcon icon={faHome} className='home-icon'/></button></Link>
                 </div>
                 <div className="client-servers" onClick={this.handleOnClick}>
                     {ownedRooms}
                     {subbedRooms}
                     <div className="join-server">
-                        <button onClick={this.actions.plusPressed}><i className="fas fa-plus"></i></button>
+                        <button onClick={this.actions.plusPressed}><FontAwesomeIcon icon={faPlus} className='plus-icon'/></button>
                     </div>
                 </div>
                 {this.state.joinVisible && <JoinPopUp actions={this.actions}/>}

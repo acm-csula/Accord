@@ -1,7 +1,9 @@
 import React from 'react';
 import logo from './accordlogoname.png';
+
+import 'bootstrap/dist/css/bootstrap.css'
 import './Login.css';
-import 'bootstrap/dist/css/bootstrap.css';
+
 
 class login extends React.Component {
     state = {

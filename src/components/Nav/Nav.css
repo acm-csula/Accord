@@ -26,7 +26,7 @@
   background: #555; 
 }
 
-.home-local i{
+.home-icon{
     font-size: 1.5rem;
     color: white;
 }
@@ -93,6 +93,10 @@
 
 .join-server button:focus{
     border-radius: 20px;
+}
+
+.plus-icon {
+    
 }
 
 .createRoom-container{

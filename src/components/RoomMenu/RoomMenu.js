@@ -1,6 +1,8 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
 import RoomSubMenu from '../RoomSubMenu/RoomSubMenu'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faSortDown} from '@fortawesome/free-solid-svg-icons'
 
 import './RoomMenu.css'
 
@@ -60,20 +62,20 @@ class RoomMenu extends React.Component {
 		return (
 			<div className='room-menu-container'>
 				<div className="server-title-header" style={this.state.openedMenuStyle} onClick={this.handleSubMenuOnClick}>
-					<a className="server-title">{this.state.serverTitle}<i className="fas fa-sort-down"></i></a>
+					<a className="server-title">{this.state.serverTitle}<FontAwesomeIcon icon={faSortDown} className='submenu-icon'/></a>
 					<div className="username-stats">
 						<i style={this.props.state.status.green}></i>
 						<a>{this.props.state.user.email}</a>
 					</div>
 				</div>
 				<div className='channel-container' onClick={this.handleOuterClick}>
-		    		<h6> Channels </h6>
-		            <div className="channel-btns">
-		                <button className="channel-btn">
-		                    <i className="fas fa-hashtag"></i> 
-		                    <a> {'general'}</a>
-		                </button>
-		            </div>
+					<h6>Channels</h6>
+					<div className='channel-btns'>
+						<button className='channel-btn'>
+							<i className='fas fa-hashtag'/>
+							<a>{'general'}</a>
+						</button>
+					</div>
 		        </div>
 				{this.state.subMenuOpened && <RoomSubMenu state={this.props.state} actions={this.actions} room={this.props.room}/>}
             </div>

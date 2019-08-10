@@ -65,3 +65,8 @@
     border-radius: inherit;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
+
+.submenu-icon {
+    margin-right: .5rem;
+    margin-left: .5rem;
+}

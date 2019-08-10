@@ -1,6 +1,8 @@
 import React from 'react'
 import CreateForm from '../CreateForm/CreateForm'
 import JoinForm from '../JoinForm/JoinForm'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faTimes} from '@fortawesome/free-solid-svg-icons'
 
 import './JoinPopUp.css'
 
@@ -21,7 +23,7 @@ class JoinPopUp extends React.Component {
 	render() {
 		return (
 			<div className="join-pop-up-container">
-				<div className='close-icon'><i className="fas fa-times" onClick={this.props.actions.plusPressed}></i></div>
+				<div className='close-icon-container'><FontAwesomeIcon icon={faTimes} className='close-icon' onClick={this.props.actions.plusPressed}/></div>
 				{!this.state.joinSelected && !this.state.createSelected &&
 					<div>
 			    		<div className="createRoom-header text-center">

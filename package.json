@@ -3,15 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.0.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.21",
+    "@fortawesome/free-brands-svg-icons": "^5.10.1",
+    "@fortawesome/free-solid-svg-icons": "^5.10.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.1",
-    "clsx": "^1.0.4",
-    "firebase": "^6.1.0",
-    "react": "^16.8.6",
-    "react-background-image": "^1.2.0",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "^3.0.1"
+    "firebase": "^6.3.5",
+    "firebase-tools": "^7.2.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
